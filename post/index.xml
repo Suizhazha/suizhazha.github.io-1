@@ -5,8 +5,8 @@
     <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 08 Jan 2020 16:40:06 +0800</lastBuildDate>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Jan 2020 16:40:06 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>CSS基础</title>
       <link>http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/</link>
-      <pubDate>Wed, 08 Jan 2020 16:40:06 +0800</pubDate>
+      <pubDate>Mon, 06 Jan 2020 16:40:06 +0800</pubDate>
       
       <guid>http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/</guid>
       <description>今天在谷里学习了 css 基础知识，结合维基百科和 mdn，写下此博客跟大家分享，如有错误之处，欢迎指正（没有奖励 😝）。 目录： css 历史 体系化学习 文档流 盒</description>
