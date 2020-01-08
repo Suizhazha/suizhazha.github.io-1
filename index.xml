@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Dec 2019 21:34:52 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 16:40:06 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,6 +27,386 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>CSS基础</title>
+      <link>http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 08 Jan 2020 16:40:06 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>HTML重点标签</title>
+      <link>http://localhost:1313/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Fri, 03 Jan 2020 22:14:28 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</guid>
+      
+        <description>&lt;p&gt;最近两天看了饥人谷的 HTML 网课，结合 mdn 文档写了篇博客，分享给大家。如有错误之处，欢迎指正！（没有奖励 😝）&lt;/p&gt;
+&lt;h3 id=&#34;a-&#34;&gt;a 标签&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;&amp;quot; target=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;heading&#34;&gt;属性：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;href：超链接&lt;/li&gt;
+&lt;li&gt;target：打开超链接窗口方式
+（http-server -c-1 或着 parcel+文件名来打开 vscode 网址）&lt;/li&gt;
+&lt;li&gt;download 下载网页（很多浏览器不支持）&lt;/li&gt;
+&lt;li&gt;rel=noopener（防止一个 bug，以后会讲）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;a--href-&#34;&gt;a 的 href 取值：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;网址：
+&lt;ol&gt;
+&lt;li&gt;https://网址&lt;/li&gt;
+&lt;li&gt;http://网址&lt;/li&gt;
+&lt;li&gt;//网址（最高级，推荐。查看：开发者工具，勾选 preserve log,浏览器自动补全跳转）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;路径
+&lt;ol&gt;
+&lt;li&gt;/a/b/c 以及 a/b/c（当前目录下查找）&lt;/li&gt;
+&lt;li&gt;index.com 以及./index.com（都是当前目录下查找）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;伪协议
+&lt;ol&gt;
+&lt;li&gt;Javascript:;&lt;code&gt;&amp;lt;a href=&amp;quot;Javascript:;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;为了直接执行 js，现在常作点击之后无动作的 a 标签）&lt;/li&gt;
+&lt;li&gt;mailto:邮箱&lt;code&gt;&amp;lt;a href=&amp;quot;mailto:573505403@qq.com&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;tel:手机号（简历用）&lt;code&gt;&amp;lt;a href=&amp;quot;tel:17853318194&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;id :&lt;code&gt;&amp;lt;a href=&amp;quot;#xxx&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;（内部锚点，跳转到指定标签位置）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;a--targe-&#34;&gt;a 的 targe 取值：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;内置名字：
+&lt;ol&gt;
+&lt;li&gt;_blank（在新窗口打开）&lt;/li&gt;
+&lt;li&gt;_self（在当前窗口打开）&lt;/li&gt;
+&lt;li&gt;_top（在最顶层窗口打开）&lt;/li&gt;
+&lt;li&gt;_parent（在父级窗口打开）&lt;/li&gt;
+&lt;li&gt;xxx（有 xxx 窗口就使用，没有就在新窗口打开就命名新窗口为 xxx，多链接看效果）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;iframe-&#34;&gt;iframe 标签：&lt;/h3&gt;
+&lt;p&gt;内嵌窗口，已经很少使用，现在都用 ajax 方式。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;table-&#34;&gt;table 标签&lt;/h3&gt;
+&lt;p&gt;table 内只能有 thead，tbody，tfoot 标签，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tr：table 一行&lt;/li&gt;
+&lt;li&gt;th：table 表头&lt;/li&gt;
+&lt;li&gt;td：table 数据
+table 三个标签可以不按顺序写，浏览器自动纠正顺序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;heading-1&#34;&gt;相关样式：&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;table-layout：
+用于布局单元格，行和列的算法。其属性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;auto：浏览器采用自动表格布局算法对表格布局。表格及单元格的宽度取决于其包含的内容。&lt;/li&gt;
+&lt;li&gt;fixed：表格和列的宽度通过表格的宽度来设置，某一列的宽度仅由该列首行的单元格决定。在当前列中，该单元格所在行之后的行并不会影响整个列宽。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;border-collapse：用来决定表格的边框是分开的还是合并的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;collapse：合并，相邻的单元格共用同一条边框。&lt;/li&gt;
+&lt;li&gt;separate：分开，默认值。每个单元格拥有独立的边框。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;img-&#34;&gt;img 标签：&lt;/h3&gt;
+&lt;p&gt;发出 get 请求，展示一张图片。&lt;/p&gt;
+&lt;h4 id=&#34;heading-2&#34;&gt;属性：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;src：必须存在，包含图片的网络地址或文件路径。&lt;/li&gt;
+&lt;li&gt;alt：不一定存在，包含对图像的文本描述，加载失败会提示代替的文本。&lt;/li&gt;
+&lt;li&gt;weight：只写高度，宽度会自适应。&lt;/li&gt;
+&lt;li&gt;height：只写宽度，高度会自适应。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;note:永远不要让图片变形！可以只写高度或宽度。&lt;/p&gt;
+&lt;h4 id=&#34;js-&#34;&gt;js 事件:&lt;/h4&gt;
+&lt;p&gt;onload/onerror:监听图片是否加载成功。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6a81fca1ffd9f?w=275&amp;amp;h=118&amp;amp;f=png&amp;amp;s=31091&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;heading-3&#34;&gt;响应式：&lt;/h4&gt;
+&lt;p&gt;先所有元素 css reset，加句
+&lt;code&gt;img{max-width：100%}&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;form-&#34;&gt;form 标签：&lt;/h3&gt;
+&lt;p&gt;表单标签，内一般含有输入框和提交按钮（input 标签）。作用：发送一个 get 或 post 请求，然后刷新页面。&lt;/p&gt;
+&lt;h4 id=&#34;heading-4&#34;&gt;属性：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;action：处理此表单信息所在的 URL。&lt;/li&gt;
+&lt;li&gt;method：可使用 HTTP post 或 get 方式来提交表单。&lt;/li&gt;
+&lt;li&gt;autocomplete：浏览器自动填充,使用 on 或 off 来打开或着关闭此功能。&lt;/li&gt;
+&lt;li&gt;target：在提交表单之后，在哪个页面显示收到的回复，包括_self，_blank，_top 和_parent。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;heading-5&#34;&gt;事件：&lt;/h4&gt;
+&lt;p&gt;onsubmit：用户点击提交按钮后触发。提交按钮可使用 value 更改提交按钮名称。
+例如：&lt;code&gt;&amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;发射&amp;quot;&amp;gt;&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;或者&lt;code&gt;&amp;lt;button type=&amp;quot;submit&amp;quot;&amp;gt;发射&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;发射&lt;!-- raw HTML omitted --&gt;。&lt;/p&gt;
+&lt;p&gt;note:两个区别 input 内不能再加其他标签，只能是纯文本，而 button 可以，甚至可以加图片。例如：&lt;code&gt;&amp;lt;button type=&amp;quot;submit&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;发射&amp;lt;/strong&amp;gt;&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;发射&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;input-&#34;&gt;input 标签：&lt;/h3&gt;
+&lt;p&gt;为了让用户输入内容。&lt;/p&gt;
+&lt;h4 id=&#34;heading-6&#34;&gt;常用属性：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;text：单行文本框，默认 type。&lt;/li&gt;
+&lt;li&gt;color：颜色控件。&lt;/li&gt;
+&lt;li&gt;password：值被遮盖的单行文本字段。&lt;/li&gt;
+&lt;li&gt;radio：单选按钮，name 属性使用同一个值可实现二选一。&lt;/li&gt;
+&lt;li&gt;checkbox：多选按钮，name 属性使用同一个值，使其在同一数组中。&lt;/li&gt;
+&lt;li&gt;file：选择文件，多选文件可添加 multiple 属性。&lt;/li&gt;
+&lt;li&gt;hidden：隐藏的控件，用于 js 自动填入 id，字符串之类的。&lt;/li&gt;
+&lt;li&gt;image：图片提交按钮。可以使用 height 和 width 属性定义图片的大小。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;heading-7&#34;&gt;事件：&lt;/h4&gt;
+&lt;p&gt;onchange：用户输入改变时触发。
+onfocus：用户鼠标集中时触发。
+onblur：用户鼠标离开时触发。&lt;/p&gt;
+&lt;h4 id=&#34;heading-8&#34;&gt;验证器：&lt;/h4&gt;
+&lt;p&gt;HTML5 新增功能。例如必须提交文本：&lt;code&gt;&amp;lt;input type=&amp;quot;text&amp;quot; required&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;heading-9&#34;&gt;注意事项：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;一般不监听input的click事件。&lt;/li&gt;
+&lt;li&gt;form内的input要有name。&lt;/li&gt;
+&lt;li&gt;form内放一个type=submit才能触发submit事件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;heading-10&#34;&gt;其他标签:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;textarea：多行文本框。固定文本框大小可用&lt;code&gt;&amp;lt;textarea style=&amp;quot;resize: none;&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt;&lt;/code&gt;具体大小可用 width，height 属性固定。&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;select:选择标签，例如：
+&lt;code&gt;&amp;lt;select&amp;gt;&amp;lt;option value=&amp;quot;1&amp;quot;&amp;gt;周一&amp;lt;/option&amp;gt;&amp;lt;option value=&amp;quot;1&amp;quot;&amp;gt;周二&amp;lt;/option&amp;gt;&amp;lt;/select&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;请选择&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;周一&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;周二&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>使用hugo搭建个人博客mac版</title>
+      <link>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</link>
+      <pubDate>Wed, 01 Jan 2020 22:15:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</guid>
+      
+        <description>&lt;h2 id=&#34;-hugo-&#34;&gt;大家好，今天给大家分享下如何使用 hugo 搭建个人博客&lt;/h2&gt;
+&lt;h3 id=&#34;1-hugo&#34;&gt;1.安装 hugo&lt;/h3&gt;
+&lt;p&gt;在终端中输入
+&lt;code&gt;brew install hugo&lt;/code&gt;安装。&lt;/p&gt;
+&lt;p&gt;安装成功后可输入&lt;code&gt;hugo version&lt;/code&gt;查看版本信息。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2&#34;&gt;2.创建新网址&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;hugo new site quickstart&lt;/code&gt;
+其中&lt;code&gt;quickstart&lt;/code&gt;更改为&lt;code&gt;用户名.github.io-creator&lt;/code&gt;（用户名为 github 用户名，需要小写）
+使用&lt;code&gt;code 用户名.github.io-creator&lt;/code&gt;使用 vscode 查看目录&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3&#34;&gt;3.添加一个主题&lt;/h3&gt;
+&lt;p&gt;在 vscode 目录下打开新的终端，输入
+&lt;code&gt;git init&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;然后，将默认主题添加到站点配置中：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;还可自定义主题，具体可浏览&lt;!-- raw HTML omitted --&gt;hugo&lt;!-- raw HTML omitted --&gt;官网查看教程。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4&#34;&gt;4.添加一些文件&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;hugo new posts/my-first-post.md&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中&lt;code&gt;my-first-post&lt;/code&gt;可更改博客名。
+可从下图内容后编辑
+&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/4/16f707cfef95191f?w=315&amp;amp;h=90&amp;amp;f=png&amp;amp;s=10148&#34; alt=&#34;&#34;&gt;
+并将&lt;code&gt;draft：ture&lt;/code&gt;更改为&lt;code&gt;draft：false&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-hugo-&#34;&gt;5.启动 Hugo 服务器&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;hugo server -D&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;6&#34;&gt;6.建立静态页面&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;hugo -D&lt;/code&gt;
+自动创建一个 public 目录。&lt;/p&gt;
+&lt;h3 id=&#34;7-github&#34;&gt;7.上传至 github&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在 vscode 新建一个.gitignore，进入后输入
+&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/4/16f7090c28139a8a?w=276&amp;amp;h=107&amp;amp;f=png&amp;amp;s=4268&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;终端下输入&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd public/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git commit -v&lt;/code&gt;备注后关闭，第一篇文章就部署完毕。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 github 上新建仓库，名称为：&lt;code&gt;用户名.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;终端中输入
+&lt;code&gt;git remote add origin git@github.com:github用户名/用户名.github.io.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git push -u origin master&lt;/code&gt;后，刷新页面即可&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;在 github settings 中找到 GitHub Pages，点击&lt;code&gt;https://github用户名.github.io/&lt;/code&gt;即可&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>HTML入门笔记</title>
+      <link>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 01 Jan 2020 21:59:13 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+      
+        <description>&lt;h2 id=&#34;-html--&#34;&gt;大家好，上星期在饥人谷学习了 HTML 的历史概述，语法和一些常用标签。前几天因为收拾东西回家，此笔记一直没有写完。今天整理完成后分享给大家，如有错误之处，欢迎指正！（没有奖励 😝）&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-html-&#34;&gt;首先是关于 HTML 的历史:&lt;/h3&gt;
+&lt;p&gt;HTML（英文：HyperText Markup Language，中文：超文本标记语言）由英国计算机科学家 Timothy John Berners-Lee 创立，同时他也是万维网的发明者。而万维网（WWW）包括了 URL，HTML 以及 HTTP，本篇只简单介绍下 HTML。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;html-&#34;&gt;HTML 起手式&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;!+tab键即可出现下图代码；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6b8a34d79cf43?w=509&amp;amp;h=252&amp;amp;f=png&amp;amp;s=33005&#34; alt=&#34;&#34;&gt;
+其中&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;
+为文档类型&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&lt;/code&gt;
+html 标签，可改 zh-cn&lt;/p&gt;
+&lt;p&gt;而 head 标签内为看不到的元素。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot; /&amp;gt;&lt;/code&gt;
+字符编码&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot; /&amp;gt;&lt;/code&gt;
+为防止页面缩放，用于兼容手机。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot; /&amp;gt;&lt;/code&gt;
+可要求 Ie 升级到最新内核（11）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;&lt;/code&gt;
+为标题&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;heading&#34;&gt;章节标签&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;标题 h1~h6&lt;/li&gt;
+&lt;li&gt;章节 section&lt;/li&gt;
+&lt;li&gt;文章 article&lt;/li&gt;
+&lt;li&gt;段落 p&lt;/li&gt;
+&lt;li&gt;头部 header&lt;/li&gt;
+&lt;li&gt;脚部 footer&lt;/li&gt;
+&lt;li&gt;主要 main&lt;/li&gt;
+&lt;li&gt;旁支 aside&lt;/li&gt;
+&lt;li&gt;划分 div&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;heading-1&#34;&gt;全局属性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;class：类(class 找元素非常不方便)，推荐：
+&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6b9e46c1ea677?w=678&amp;amp;h=484&amp;amp;f=png&amp;amp;s=61754&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;contenteditable，可以让所有元素可编辑。&lt;code&gt;&amp;lt;div class=&amp;quot;middle bordered&amp;quot; contenteditable&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;note:
+要想使 style 标签可见：放置 body 内，加&lt;code&gt;style{display:block;}&lt;/code&gt;
+配合 contenteditable 可被编辑样式,这是个调试技巧，可以先显示再编辑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hidden：隐藏，比&lt;code&gt;display：block&lt;/code&gt;优先级高&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;id：不到万不得已，不用要 id，因为不会报错。（唯一性会误导别人）
+简写为#xxx，js 可直接调用 id 元素，有些忌讳，新手不要用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;style：html 的属性，不是 css 的样式，还可通过 js 设置，js 会覆盖 html 的 style（js 优先级最高，html&amp;gt;css）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tabindex：控制 tab 的顺序。（0 是最后访问，-1 是别访问）
+&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba06008daa35?w=1032&amp;amp;h=102&amp;amp;f=png&amp;amp;s=33221&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;title：可在开发者模式，有代码提示。
+例：标题文字太多，想省略号隐藏。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba0a5c66797b?w=594&amp;amp;h=282&amp;amp;f=png&amp;amp;s=49546&#34; alt=&#34;&#34;&gt;效果为：
+&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba101808df6b?w=726&amp;amp;h=90&amp;amp;f=png&amp;amp;s=8817&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;若要显示完整内容：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba13b53b9899?w=736&amp;amp;h=174&amp;amp;f=png&amp;amp;s=43838&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-css-&#34;&gt;默认样式（因为 css 还没出生）&lt;/h3&gt;
+&lt;p&gt;查看：开发者工具，element-&amp;gt;style-&amp;gt;user agent stylesheet&lt;/p&gt;
+&lt;h4 id=&#34;css-reset&#34;&gt;css reset(清除默认样式，加自己的样式)&lt;/h4&gt;
+&lt;p&gt;方方老师常用 reset&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba7cb8b2de8c?w=618&amp;amp;h=188&amp;amp;f=png&amp;amp;s=63122&#34; alt=&#34;&#34;&gt;
+也可借鉴大厂源码：
+开发者工具内找 h1h2h3h4…，连击 3 下复制，table 后删除。&lt;/p&gt;
+&lt;p&gt;推荐加上如下图所示代码不加会非常丑&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba41439aa9dd?w=292&amp;amp;h=155&amp;amp;f=png&amp;amp;s=15201&#34; alt=&#34;&#34;&gt;
+输入 table+tab 键可快速打出下图代码：
+&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6bb9db09ceb82?w=205&amp;amp;h=95&amp;amp;f=png&amp;amp;s=6087&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;heading-2&#34;&gt;内容标签：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ol：有顺序的列表，内只有 li（list item）&lt;/li&gt;
+&lt;li&gt;ul：无顺序的列表，dl+tab 可生成所有结构&lt;/li&gt;
+&lt;li&gt;dl：描述列表
+&lt;ul&gt;
+&lt;li&gt;dt：描述对象&lt;/li&gt;
+&lt;li&gt;dd：描述数据内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;pre：保留所有空格，回车，tab（因为 tab，回车和多个空格会缩成一个空格）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;code:默认字体等宽，
+pre 配合 code 使用，效果更佳。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hr：分割线&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;br：换行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a：超链接&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;href：网址链接&lt;/li&gt;
+&lt;li&gt;target：新窗口打开（国内常用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;em：强调内容语气，默认斜体&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;strong：强调内容本身，默认加粗&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;quote：内联引用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;blockquote：块引用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;heading-3&#34;&gt;第一次使用博客记录下学习笔记，感觉很乱，标签介绍也很简单，以后会边学习边仔细整理。&lt;/h2&gt;
 </description>
       
     </item>

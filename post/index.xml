@@ -6,10 +6,46 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Dec 2019 21:34:52 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 16:40:06 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS基础</title>
+      <link>http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 08 Jan 2020 16:40:06 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML重点标签</title>
+      <link>http://localhost:1313/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Fri, 03 Jan 2020 22:14:28 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</guid>
+      <description>最近两天看了饥人谷的 HTML 网课，结合 mdn 文档写了篇博客，分享给大家。如有错误之处，欢迎指正！（没有奖励 😝） a 标签 &amp;lt;a href=&amp;quot;&amp;quot; target=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 属性： href：超链接 tar</description>
+    </item>
+    
+    <item>
+      <title>使用hugo搭建个人博客mac版</title>
+      <link>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</link>
+      <pubDate>Wed, 01 Jan 2020 22:15:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</guid>
+      <description>大家好，今天给大家分享下如何使用 hugo 搭建个人博客 1.安装 hugo 在终端中输入 brew install hugo安装。 安装成功后可输入hugo version查看版本信息。 2</description>
+    </item>
+    
+    <item>
+      <title>HTML入门笔记</title>
+      <link>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 01 Jan 2020 21:59:13 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>大家好，上星期在饥人谷学习了 HTML 的历史概述，语法和一些常用标签。前几天因为收拾东西回家，此笔记一直没有写完。今天整理完成后分享给大家，如有错误</description>
+    </item>
     
     <item>
       <title>开博大吉</title>
