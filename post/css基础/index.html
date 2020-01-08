@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="suixin" />
-  <meta name="description" content="" />
+  <meta name="description" content="今天在谷里学习了 css 基础知识，结合维基百科和 mdn，写下此博客跟大家分享，如有错误之处，欢迎指正（没有奖励 😝）。 目录： css 历史 体系化学习 文档流 盒" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -60,22 +60,22 @@
 
 
 <meta property="og:title" content="CSS基础" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="今天在谷里学习了 css 基础知识，结合维基百科和 mdn，写下此博客跟大家分享，如有错误之处，欢迎指正（没有奖励 😝）。 目录： css 历史 体系化学习 文档流 盒" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/" />
 <meta property="article:published_time" content="2020-01-08T16:40:06+08:00" />
 <meta property="article:modified_time" content="2020-01-08T16:40:06+08:00" />
 <meta itemprop="name" content="CSS基础">
-<meta itemprop="description" content="">
+<meta itemprop="description" content="今天在谷里学习了 css 基础知识，结合维基百科和 mdn，写下此博客跟大家分享，如有错误之处，欢迎指正（没有奖励 😝）。 目录： css 历史 体系化学习 文档流 盒">
 <meta itemprop="datePublished" content="2020-01-08T16:40:06&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-08T16:40:06&#43;08:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="1576">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="CSS基础"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="今天在谷里学习了 css 基础知识，结合维基百科和 mdn，写下此博客跟大家分享，如有错误之处，欢迎指正（没有奖励 😝）。 目录： css 历史 体系化学习 文档流 盒"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -359,13 +359,215 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">目录：</a>
+      <ul>
+        <li><a href="#css-">css 历史</a></li>
+        <li><a href="#-css21-ie-css3-ie8-">目前 CSS2.1 为使用最广泛的版本（IE 支持），CSS3 为最新版本（IE8 部分支持）。</a></li>
+        <li><a href="#heading-1">体系化学习</a></li>
+        <li><a href="#heading-4">文档流</a></li>
+        <li><a href="#heading-5">盒模型</a></li>
+        <li><a href="#margin-">margin 合并：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      
+      <p>今天在谷里学习了 css 基础知识，结合维基百科和 mdn，写下此博客跟大家分享，如有错误之处，欢迎指正（没有奖励 😝）。</p>
+<h2 id="heading">目录：</h2>
+<ul>
+<li>css 历史</li>
+<li>体系化学习</li>
+<li>文档流</li>
+<li>盒模型</li>
+</ul>
+<hr>
+<h3 id="css-">css 历史</h3>
+<p>css：中文为层叠样式表（又称串样式列表、级联样式表、串接样式表、阶层式样式表）是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（字体、间距和颜色等）的计算机语言，由 W3C 定义和维护。当前使用最广泛的版本是 CSS2.1，为 W3C 的推荐标准。CSS3 现在已被大部分现代浏览器支持，而下一版的 CSS4 仍在开发中。1994 年，哈肯·维姆·莱提出了 CSS 的最初建议。</p>
+<p>层叠:</p>
+<ul>
+<li>样式层叠：可以多次对同一选择器进行样式声明。</li>
+<li>选择器层叠：可以用不同选择器对同一个元素进行样式声明。</li>
+<li>文件层叠：可以用多个文件进行层叠。</li>
+</ul>
+<p>note：这些特性使得 css 极度灵活，也为 css 被吐槽留下了隐患。</p>
+<h3 id="-css21-ie-css3-ie8-">目前 CSS2.1 为使用最广泛的版本（IE 支持），CSS3 为最新版本（IE8 部分支持）。</h3>
+<p>使用 caniuse.com 检查各种浏览器支持哪些特性。</p>
+<hr>
+<h3 id="heading-1">体系化学习</h3>
+<h4 id="heading-2">怎样学习一门语言：</h4>
+<ul>
+<li>
+<p>语法（怎样写代码）</p>
+<ul>
+<li>
+<p>语法 1：样式语法</p>
+<pre><code>  选择器{
+    属性名:属性值;
+    /*注释*/
+   }
+</code></pre>
+<p>Notes：</p>
+<ol>
+<li>所有符号都是英文符号。</li>
+<li>区分大小写。</li>
+<li>没有//注释</li>
+<li>最后一个分号可省略，但建议不要省略。</li>
+<li>任何一个地方写错了，都不会报错，浏览器会忽略。</li>
+<li>若想知道写错，</li>
+</ol>
+</li>
+<li>
+<p>语法 2:@语法</p>
+<pre><code>   @charset &quot;UTF-8&quot;;
+   @import url(css路径);
+   @media (min-width: 100px)and (max-width:200px){
+      语法1
+      }
+</code></pre>
+<p>Notes:</p>
+<ol>
+<li>@charset 必须放在第一行。</li>
+<li>前两个@语法都必须以;结尾。</li>
+<li>@media 语法以后在讲。</li>
+<li>charset 是字符集的意思，但 UTF-8 是字符编码 encoding，为历史遗留问题。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>调试（查找代码错误）</p>
+<ol>
+<li>
+<p><a href="https://jigsaw.w3.org/css-validator/">https://jigsaw.w3.org/css-validator/</a>将代码粘贴上去即可，不推荐</p>
+</li>
+<li>
+<p>vscode 颜色报错，位置不大准。</p>
+</li>
+<li>
+<p>WebStorm 看颜色，位置准确。</p>
+</li>
+<li>
+<p>Chrome 开发者工具看警告。</p>
+<pre><code>1. 找到标签
+2. 是否有选择器
+3. 样式是否被划掉
+4. 样式是否被警告
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<ol start="5">
+<li>
+<p>Border 调试法：</p>
+<pre><code>1. 找到怀疑元素
+2. 给该元素加一个border
+3. 若border没生效，说明选择器错了或语法错了
+4. 若border生效了，看看边界是否符合预期
+5. bug解决了删除border
+</code></pre>
+<p>note：</p>
+<p>CSS 的 border 调试法相当于 JS 的 log 调试法。</p>
+</li>
+</ol>
+<ul>
+<li>查资料
+<ol>
+<li>mdn</li>
+<li>css tricks</li>
+<li>张鑫旭博客</li>
+</ol>
+</li>
+<li>标准制定者 w3c
+<ol>
+<li>all css specifications</li>
+<li>css2.1 中文版</li>
+</ol>
+</li>
+</ul>
+<h4 id="heading-3">如何学</h4>
+<ul>
+<li>抄文档，抄老师</li>
+<li>在自己电脑上运行</li>
+<li>加入自己的想法，重新运行并调试。</li>
+</ul>
+<hr>
+<h3 id="heading-4">文档流</h3>
+<ul>
+<li>
+<p>流动方向</p>
+<ul>
+<li>inline 元素从左到右，到达最右边才会换行，字节会断开。</li>
+<li>block 元素从上到下，每一个都另起一行。</li>
+<li>inline-block 元素也是从左到右，字节不会断开。</li>
+</ul>
+</li>
+<li>
+<p>宽度</p>
+<ul>
+<li>inline 元素默认宽度为内部 inline 元素的和，inline 元素内不能存在 block 元素，不能用 width 指定，白写。</li>
+<li>block 元素默认自动计算宽度，不是也不能写 width:100%;，会出 bug，一般 width 用 px 或者 em 指定。</li>
+<li>inline-block 元素结合两者特点，宽度默认跟 inline 元素一样，但可用 width 指定。</li>
+</ul>
+</li>
+<li>
+<p>高度</p>
+<ul>
+<li>inline 元素高度由 line-height 间接决定，与 height，padding 无关。</li>
+<li>block 元素高度由内部文档流元素决定，
+可以设置 height。</li>
+<li>inline-block 元素跟 block 元素基本类似，可以设置 height。</li>
+</ul>
+</li>
+<li>
+<p>overflow
+overflow 还可设置 overflow-x 和 overflow-y。</p>
+<ul>
+<li>visibl：默认值。内容不会被剪裁，可以呈现在元素框之外。</li>
+<li>hidden：内容将被剪裁以适合填充框。 不提供滚动条。</li>
+<li>scroll：内容将被剪裁以适合填充框。 浏览器显示滚动条，无论是否实际剪切了任何内容。（这可以防止滚动条在内容更改时出现或消失。）打印机仍可能打印溢出的内容。</li>
+<li>auto：如果内容适合填充框内部，则看起来与可见内容相同。如果内容溢出，桌面浏览器会提供滚动条。</li>
+</ul>
+</li>
+<li>
+<p>脱离文档流</p>
+<pre><code>![](https://user-gold-cdn.xitu.io/2020/1/7/16f7ed138d0d84fe?w=540&amp;h=307&amp;f=png&amp;s=49695)
+</code></pre>
+<p>或</p>
+<pre><code>![](https://user-gold-cdn.xitu.io/2020/1/7/16f7ed38d08b9283?w=533&amp;h=349&amp;f=png&amp;s=52145)
+</code></pre>
+<p>效果为：
+<img src="https://user-gold-cdn.xitu.io/2020/1/7/16f7ed1f8ecf0104?w=272&amp;h=80&amp;f=png&amp;s=5398" alt=""></p>
+</li>
+</ul>
+<hr>
+<h3 id="heading-5">盒模型</h3>
+<p>CSS 盒模型有两种，一种是 content-box（内容盒） 一种是 border-box（边框盒）。</p>
+<p>content-box 的宽度 width 表示内容区宽度，不包含 padding 和 border；
+而 border-box 的宽度 width 表示内容区 + padding + border 的总和。
+一般优先使用后者（border-box）。</p>
+<p>即下图：
+<img src="https://user-gold-cdn.xitu.io/2020/1/7/16f7ee12704336c8?w=793&amp;h=396&amp;f=png&amp;s=80174" alt=""></p>
+<h3 id="margin-">margin 合并：</h3>
+<ul>
+<li>
+<p>两个孩子之间的上下 margin 会合并：
+<img src="https://user-gold-cdn.xitu.io/2020/1/7/16f7eed63dee59b9?w=812&amp;h=354&amp;f=png&amp;s=70930" alt="">
+css 要求 margin 不用分两个单独写，直接合并就好。
+<img src="https://user-gold-cdn.xitu.io/2020/1/7/16f7eef242913a14?w=811&amp;h=446&amp;f=png&amp;s=69168" alt=""></p>
+</li>
+<li>
+<p>第一个孩子和最后一个孩子的上下 margin，可以和他们的父母合并：
+<img src="https://user-gold-cdn.xitu.io/2020/1/7/16f7fcb7e48d3d64?w=1127&amp;h=588&amp;f=png&amp;s=132611" alt=""></p>
+</li>
+</ul>
+
     </div>
 
     
