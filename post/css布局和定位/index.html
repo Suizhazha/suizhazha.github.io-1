@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>归档 - Jane - A super concise theme for Hugo</title>
+  <title>CSS布局和定位 - Jane - A super concise theme for Hugo</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="suixin" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="布局是什么： 把页面分成一块一块，按左中右，上中下等排列。 布局分类: 固定宽度布局，例如淘宝网， 一般宽度 960/1000/1024px。 不固定宽" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.62.0" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/" />
-<link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="Jane - A super concise theme for Hugo" />
+<link rel="canonical" href="http://localhost:1313/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/" />
+
 
 
 
@@ -58,15 +59,23 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/post/" />
-<meta property="og:updated_time" content="2020-01-10T19:54:28+08:00" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Hugo theme jane example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta property="og:title" content="CSS布局和定位" />
+<meta property="og:description" content="布局是什么： 把页面分成一块一块，按左中右，上中下等排列。 布局分类: 固定宽度布局，例如淘宝网， 一般宽度 960/1000/1024px。 不固定宽" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/" />
+<meta property="article:published_time" content="2020-01-10T19:54:28+08:00" />
+<meta property="article:modified_time" content="2020-01-10T19:54:28+08:00" />
+<meta itemprop="name" content="CSS布局和定位">
+<meta itemprop="description" content="布局是什么： 把页面分成一块一块，按左中右，上中下等排列。 布局分类: 固定宽度布局，例如淘宝网， 一般宽度 960/1000/1024px。 不固定宽">
+<meta itemprop="datePublished" content="2020-01-10T19:54:28&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-10T19:54:28&#43;08:00" />
+<meta itemprop="wordCount" content="1938">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS布局和定位"/>
+<meta name="twitter:description" content="布局是什么： 把页面分成一块一块，按左中右，上中下等排列。 布局分类: 固定宽度布局，例如淘宝网， 一般宽度 960/1000/1024px。 不固定宽"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -244,7 +253,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -325,116 +334,339 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          共计 6 篇文章
-      </span>
-    </div>
+          <article class="post bg-white">
     
-      <div class="collection-title">
-        <h2 class="archive-year">2020</h2>
+    <header class="post-header">
+      <h1 class="post-title">CSS布局和定位</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-01-10" class="post-time">
+          2020-01-10
+        </time>
+        
+        
+
+        
+        
+
+        
+        
       </div>
+    </header>
 
-    <div class="archive-post">
-      <time datetime="2020-01-10" class="archive-post-time">
-        2020-01-10
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/" class="archive-post-link">
-          CSS布局和定位
-        </a>
-      </span>
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading">布局是什么：</a></li>
+        <li><a href="#heading-1">布局分类:</a></li>
+        <li><a href="#heading-2">布局思路：</a></li>
+        <li><a href="#heading-3">三种布局套路：</a></li>
+        <li><a href="#-flex--flex--flex-httpsflexboxfroggycomzh-cn">推荐一款 flex 青蛙游戏，轻松愉快学习 flex 布局，以上 flex 元素属性解释也参考此游戏，详细可访问https://flexboxfroggy.com/#zh-cn。</a></li>
+        <li><a href="#css-">CSS 定位：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h3 id="heading">布局是什么：</h3>
+<p>把页面分成一块一块，按左中右，上中下等排列。</p>
+<h3 id="heading-1">布局分类:</h3>
+<ul>
+<li>固定宽度布局，例如淘宝网， 一般宽度 960/1000/1024px。</li>
+<li>不固定宽度布局，例如手机端，主要靠文档流原理布局。
+文档流本身就是自适应的，不需要额外添加样式。</li>
+<li>响应式布局，pc 上固定宽度，手机上不固定宽度，是一种混合布局。</li>
+</ul>
+<h3 id="heading-2">布局思路：</h3>
+<ul>
+<li>从大到小:先定大局，再完善每个小布局。</li>
+<li>从小到大:先完成小布局，再组合成大布局，推荐新手。</li>
+</ul>
+<hr>
+<h3 id="heading-3">三种布局套路：</h3>
+<ul>
+<li>
+<p>float 布局：</p>
+<pre><code>1. 子元素上加float：left和width。
+2. 在父元素上加.clearfix。
+
+例如：
+
+![](https://user-gold-cdn.xitu.io/2020/1/7/16f801aab2022468?w=1279&amp;h=699&amp;f=png&amp;s=116392)
+</code></pre>
+<p>Notes：</p>
+<ul>
+<li>
+<p>有时最后一个元素不加 width，留些空间，可加上最大宽度<code>max-width：100px；</code>若加上 width 会出现下图情况:
+<img src="https://user-gold-cdn.xitu.io/2020/1/7/16f80226f625feb8?w=139&amp;h=51&amp;f=png&amp;s=3749" alt=""></p>
+</li>
+<li>
+<p>不需要做响应式，float 布局专为 IE 准备。</p>
+</li>
+<li>
+<p>解决 IE6/7 存在双倍 margin 的 bug，</p>
+<pre><code> 1. 针对IE6/7，把margin减半，如下图，则IE上显示5px乘2，正常浏览器上显示10px：
+</code></pre>
+<p><img src="https://user-gold-cdn.xitu.io/2020/1/7/16f803169194f6f8?w=267&amp;h=55&amp;f=png&amp;s=8283" alt=""> 2. 加一个 display：inline-block； - 若图片下有多余的东西：
+添加
+<code>vertical-align: top;</code>
+或者<code>vertical-align: middle;</code>
+<img src="https://user-gold-cdn.xitu.io/2020/1/7/16f806065bc2dd9d?w=403&amp;h=107&amp;f=png&amp;s=30878" alt=""></p>
+</li>
+<li>
+<p>有时 border 调试会干扰 width，可用 outline 调试。</p>
+</li>
+<li>
+<p>如果有块级元素且 width 固定，则左右 margin 的 auto 可让元素自动居中。</p>
+</li>
+<li>
+<p>关于平均布局，计算出 x，y 的值，必要时中间加一层 div，用到负 margin，值为 y 的值。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>flex 布局：</p>
+<pre><code>flex container（容器）样式：一般作父元素
+
+ - 让一个元素变成flex容器：
+</code></pre>
+<p><img src="https://user-gold-cdn.xitu.io/2020/1/8/16f8519c00157e08?w=292&amp;h=136&amp;f=png&amp;s=10623" alt=""></p>
+<ol>
+<li>
+<p>justify-content 属性：将 flex 元素与主轴对齐。</p>
+<ul>
+<li>flex-start: 元素和容器的左端对齐</li>
+<li>flex-end: 元素和容器的右端对齐</li>
+<li>center: 元素在容器里居中</li>
+<li>space-between:元素之间保持相等的距离</li>
+<li>space-around:元素周围保持相等的距离</li>
+</ul>
+</li>
+<li>
+<p>align-items 属性：在交叉轴上对齐多个元素。</p>
+<ul>
+<li>flex-start: 元素与容器的顶部对齐</li>
+<li>flex-end: 元素与容器的底部对齐。</li>
+<li>center: 元素纵向居中</li>
+<li>baseline: 元素在容器的基线位置显示</li>
+<li>stretch: 元素被拉伸以填满整个容器</li>
+</ul>
+</li>
+<li>
+<p>flex-direction 属性:决定主轴的方向。</p>
+<ul>
+<li>row: 元素摆放的方向和文字方向一致</li>
+<li>row-reverse: 元素摆放的方向和文字方向相反</li>
+<li>column: 元素从上放到下</li>
+<li>column-reverse: 元素从下放到上</li>
+</ul>
+</li>
+<li>
+<p>flex-wrap 属性：定义元素必须在一行，或者自动换行。</p>
+<ul>
+<li>nowrap: 所有的元素都在一行</li>
+<li>wrap: 元素自动换成多行</li>
+<li>wrap-reverse: 元素自动换成逆序的多行</li>
+</ul>
+</li>
+<li>
+<p>flex-flow 属性：
+flex-flow 属性包括 flex-direction 和 flex-wrap 两个属性，这个缩写属性接受两个属性的值，两个值中间以空格隔开。</p>
+<pre><code>例如：`flex-flow: row wrap;`设置行并自动换行。
+</code></pre>
+</li>
+<li>
+<p>align-content 属性：决定行与行之间的间隔，而 align-items 决定元素整体在容器的什么位置。</p>
+<ul>
+<li>flex-start: 多行都集中在顶部。</li>
+<li>flex-end: 多行都集中在底部。</li>
+<li>center: 多行居中。</li>
+<li>space-between: 行与行之间保持相等距离。</li>
+<li>space-around: 每行的周围保持相等距离。</li>
+<li>stretch: 每一行都被拉伸以填满容器。</li>
+</ul>
+</li>
+</ol>
+<p>flex items（项目）样式：一般作子元素</p>
+</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2020/1/9/16f89d7b43b2400c?w=189&amp;h=186&amp;f=png&amp;s=23768" alt=""></p>
+<ol>
+<li>
+<p>order 属性:决定 flex 元素的顺序，元素的属性默认值为 0，还可设置属性为正数或负数。</p>
+</li>
+<li>
+<p>flex-grow 属性：决定 flex 元素的拉伸程度，元素的属性默认值为 0，还可设置属性为正数。</p>
+</li>
+<li>
+<p>flex-shrink 属性：决定了 flex 元素的收缩程度，flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值，属性默认值为 0，还可设置属性为正数。</p>
+</li>
+<li>
+<p>flex-basis 属性：决定了 flex 元素的基准宽度，如果不使用 box-sizing 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸，属性默认值为 auto。</p>
+</li>
+<li>
+<p>flex-grow、flex-shrink 和 flex-basis 属性可以缩写，例如:</p>
+<pre><code>  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 100px;
+</code></pre>
+<p>可以写成：</p>
+<pre><code>  flex： 1 0 100px;
+</code></pre>
+</li>
+<li>
+<p>align-self 属性：在交叉轴上对齐一个元素，其值和 align-items 相同，但会覆盖 align-items 属性值。</p>
+</li>
+</ol>
+<h3 id="-flex--flex--flex-httpsflexboxfroggycomzh-cn">推荐一款 flex 青蛙游戏，轻松愉快学习 flex 布局，以上 flex 元素属性解释也参考此游戏，详细可访问https://flexboxfroggy.com/#zh-cn。</h3>
+<ul>
+<li>grid 布局：功能最强大的布局方案，但目前兼容性还不好。也分 container 和 items 样式，使用 grid-template-rows 和 grid-template-columns 属性来定义网格的 columns 和 rows，也可使用 grid-column-start, grid-column-end, grid-row-start 和 grid-row-end 属性定位网格线。
+例如：</li>
+</ul>
+<pre><code>.container {
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           grid-template-rows: 100px 100px;
+         }
+.items{
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 1;
+     grid-row-end: 2;
+ }
+</code></pre><p><img src="https://user-gold-cdn.xitu.io/2020/1/9/16f8a5ad65608989?w=651&amp;h=335&amp;f=png&amp;s=13874" alt=""></p>
+<h4 id="grid-">grid 尤其适合不规则的布局。</h4>
+<hr>
+<h3 id="css-">CSS 定位：</h3>
+<ul>
+<li>
+<p>position</p>
+<ul>
+<li>
+<p>static：默认值，待在文档流里</p>
+</li>
+<li>
+<p>relative：相对定位，未脱离文档流，可在不改变页面布局的前提下调整元素位置。</p>
+<ol>
+<li>现在已经很少用作位移，常用作 absolute 父元素。</li>
+<li>配合 z-index：默认值 auto，不创建新层叠上下文，还可取正负数。</li>
+</ol>
+</li>
+<li>
+<p>absolute：绝对定位，相对于祖先元素中最近的一个定位元素定位的，定位基准是祖先非 static 的定位元素。</p>
+<ol>
+<li>脱离原来位置，另起一层，如对话框关闭按钮或鼠标提示。</li>
+<li>配合 z-index。</li>
+<li>和 relative 父元素配合使用。</li>
+</ol>
+</li>
+</ul>
+<p>Notes：</p>
+<pre><code>  1.white-space:nowrap;文字内容不准换行。
+  2.善用left：100%。
+  3.善用left：50%；加负margin。
+  4.有些浏览器不写top/left会位置错乱。
+</code></pre>
+<ul>
+<li>
+<p>fixed：固定定位，定位基准是 viewport，手机上尽量不要用这个属性（坑）。</p>
+<ol>
+<li>
+<p>用于烦人的广告或者回到顶部按钮。</p>
+</li>
+<li>
+<p>配合 z-index。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>sticky：沾滞定位，适合导航，目前兼容性很差。</p>
+</li>
+</ul>
+</li>
+</ul>
+
     </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">suixin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2020-01-10
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
     
 
-    <div class="archive-post">
-      <time datetime="2020-01-06" class="archive-post-time">
-        2020-01-06
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/css%E5%9F%BA%E7%A1%80/" class="archive-post-link">
-          CSS基础
-        </a>
-      </span>
-    </div>
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/css%E5%9F%BA%E7%A1%80/">
+            <span class="next-text nav-default">CSS基础</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
     
 
-    <div class="archive-post">
-      <time datetime="2020-01-03" class="archive-post-time">
-        2020-01-03
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/" class="archive-post-link">
-          HTML重点标签
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-01-01" class="archive-post-time">
-        2020-01-01
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/" class="archive-post-link">
-          使用hugo搭建个人博客mac版
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-01-01" class="archive-post-time">
-        2020-01-01
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" class="archive-post-link">
-          HTML入门笔记
-        </a>
-      </span>
-    </div>
-    
-      <div class="collection-title">
-        <h2 class="archive-year">2019</h2>
-      </div>
-
-    <div class="archive-post">
-      <time datetime="2019-12-27" class="archive-post-time">
-        2019-12-27
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/" class="archive-post-link">
-          开博大吉
-        </a>
-      </span>
-    </div></section>
-
-
-
-
-
-
   
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
 
         </div>
       </div>

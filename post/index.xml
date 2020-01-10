@@ -5,11 +5,20 @@
     <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 06 Jan 2020 16:40:06 +0800</lastBuildDate>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Jan 2020 19:54:28 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS布局和定位</title>
+      <link>http://localhost:1313/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/</link>
+      <pubDate>Fri, 10 Jan 2020 19:54:28 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/</guid>
+      <description>布局是什么： 把页面分成一块一块，按左中右，上中下等排列。 布局分类: 固定宽度布局，例如淘宝网， 一般宽度 960/1000/1024px。 不固定宽</description>
+    </item>
     
     <item>
       <title>CSS基础</title>
