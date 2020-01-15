@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Jan 2020 22:01:29 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2020 00:34:31 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,6 +27,112 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>浅析URL</title>
+      <link>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</link>
+      <pubDate>Thu, 16 Jan 2020 00:34:31 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</guid>
+      
+        <description>&lt;h3 id=&#34;ip-internet-protocal&#34;&gt;IP：网际协议，全称 Internet Protocal。&lt;/h3&gt;
+&lt;p&gt;主要有两个功能：标识主机或者网络和寻址。
+约定了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如何定位一台设备。&lt;/li&gt;
+&lt;li&gt;如何封装数据报文，以跟其他设备交流。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;IP 分为内网和外网。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-ip&#34;&gt;外网 IP&lt;/h3&gt;
+&lt;p&gt;可在 ip138.com 可查看外网 IP，而重启路由器后，可能会重新分配一个外网 IP。&lt;/p&gt;
+&lt;h3 id=&#34;-ip-1&#34;&gt;内网 IP&lt;/h3&gt;
+&lt;p&gt;一般格式为 192.168.xxx.xxx，一般路由器 IP 为 192.168.1.1。&lt;/p&gt;
+&lt;h3 id=&#34;-ip-2&#34;&gt;几个特殊的 IP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;127.0.0.1 表示自己。&lt;/li&gt;
+&lt;li&gt;localhost 通过 hosts 指定为自己。&lt;/li&gt;
+&lt;li&gt;0.0.0.0 不表示任何设备。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hosts-&#34;&gt;hosts 文件&lt;/h3&gt;
+&lt;p&gt;Windows 系统中，hosts 位于 C:\Windows\System32\drivers\etc\hosts 。在 macOS / Linux 系统中，hosts 位于 /etc/hosts。&lt;/p&gt;
+&lt;h3 id=&#34;-port&#34;&gt;端口 Port&lt;/h3&gt;
+&lt;p&gt;一台机器可以提供不同服务。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要提供 HTTP 服务最好使用 80 端口。&lt;/li&gt;
+&lt;li&gt;要提供 HTTPS 服务最好使用 433 端口。&lt;/li&gt;
+&lt;li&gt;要提供 FTP 服务最好使用 21 端口。&lt;/li&gt;
+&lt;li&gt;一共有 65535 个端口。（基本上够用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;heading&#34;&gt;端口规则&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;0 到 1023 号端口是留给系统使用的，拥有了管理员权限后，才能使用 0-1023 号端口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其他端口可以给普通用户使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;http-server 默认使用 8080 端口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;端口被占用，只能用另一个端口。&lt;/p&gt;
+&lt;h4 id=&#34;ip-&#34;&gt;IP 和端口缺一不可！&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;heading-1&#34;&gt;域名&lt;/h3&gt;
+&lt;p&gt;域名可以说是一个 IP 地址的别称，为了便于记忆。&lt;/p&gt;
+&lt;p&gt;可以 ping 域名来查看 IP 地址。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个域名可以对应不同的 IP（负载均衡），大公司常用，可防止一台机器扛不住。&lt;/li&gt;
+&lt;li&gt;一个 IP 可以对应不同域名（共享主机），小公司常用，公用服务器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;heading-2&#34;&gt;域名类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;顶级域名： .com&lt;/li&gt;
+&lt;li&gt;二级域名：baidu.com（俗称一级域名）&lt;/li&gt;
+&lt;li&gt;三级域名： &lt;a href=&#34;http://www.baidu.com&#34;&gt;www.baidu.com&lt;/a&gt;（俗称二级域名）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.xxx.com&#34;&gt;www.xxx.com&lt;/a&gt; 和 xxx.com 可能是同一家公司，也可能不是，而且 www 非常多余。&lt;/p&gt;
+&lt;h3 id=&#34;dns&#34;&gt;DNS&lt;/h3&gt;
+&lt;p&gt;DNS（Domain Name System）将域名和 IP 对应起来。&lt;/p&gt;
+&lt;p&gt;比如:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;当你输入 baidu.com 时，你的浏览器会向运营商提供的服务器询问 baidu.com 对应什么 IP&lt;/li&gt;
+&lt;li&gt;运营商回复 IP 后，浏览器才会向相应 IP 的 80/433 端口发送请求。&lt;/li&gt;
+&lt;li&gt;请求的内容即为 baidu.com 的首页。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;80--443-&#34;&gt;80 或 443 窗口&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;服务器默认使用 80 提供 http 服务。&lt;/li&gt;
+&lt;li&gt;服务器默认使用 443 提供 https 服务。&lt;/li&gt;
+&lt;li&gt;可在开发者工具里查看具体的端口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;heading-3&#34;&gt;路径&lt;/h3&gt;
+&lt;p&gt;用于请求不同的页面，路径是没有后缀，在开发者工具 Network 中可查看。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Learn/HTML&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Learn/HTML&lt;/a&gt;
+&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Learn/CSS&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Learn/CSS&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;heading-4&#34;&gt;查询参数&lt;/h3&gt;
+&lt;p&gt;而同一页面，同一路径，也可以显示不同内容，主要取决于查询参数。&lt;/p&gt;
+&lt;h3 id=&#34;heading-5&#34;&gt;锚点&lt;/h3&gt;
+&lt;p&gt;同一页面，同一查询结果，同一内容的不同位置。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS#&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Web/CSS#&lt;/a&gt;参考书
+&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS#&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Web/CSS#&lt;/a&gt;教程&lt;/p&gt;
+&lt;p&gt;notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;锚点看起来有中文，但实际不支持中文（通过编码识别）。&lt;/li&gt;
+&lt;li&gt;锚点无法在 Network 面板看到，因为锚点不会传给服务器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;url&#34;&gt;URL&lt;/h3&gt;
+&lt;p&gt;完整的 URL 包括&lt;code&gt;[协议类型]://[访问资源需要的凭证信息]@[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询参数]#[锚点]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中[访问凭证信息]、[端口号]、[查询参数]、[锚点]都属于选填项。&lt;/p&gt;
+&lt;p&gt;HTTPS 默认端口 443，HTTP 默认端口 80。&lt;/p&gt;
 </description>
       
     </item>

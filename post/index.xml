@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Jan 2020 22:01:29 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2020 00:34:31 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>浅析URL</title>
+      <link>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</link>
+      <pubDate>Thu, 16 Jan 2020 00:34:31 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</guid>
+      <description>IP：网际协议，全称 Internet Protocal。 主要有两个功能：标识主机或者网络和寻址。 约定了： 如何定位一台设备。 如何封装数据报文，以跟其他设备交流</description>
+    </item>
     
     <item>
       <title>CSS知识总结</title>
