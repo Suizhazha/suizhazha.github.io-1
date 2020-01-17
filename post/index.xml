@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Jan 2020 00:34:31 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jan 2020 23:26:49 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScrip历史及设计缺陷总结</title>
+      <link>http://localhost:1313/post/javascrip%E5%8E%86%E5%8F%B2%E5%8F%8A%E8%AE%BE%E8%AE%A1%E7%BC%BA%E9%99%B7%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Fri, 17 Jan 2020 23:26:49 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/javascrip%E5%8E%86%E5%8F%B2%E5%8F%8A%E8%AE%BE%E8%AE%A1%E7%BC%BA%E9%99%B7%E6%80%BB%E7%BB%93/</guid>
+      <description>JS 的起源（始于网景） 1993 年，伊利诺伊大学厄巴纳-尚佩恩分校的国家超级电脑应用中心（NCSA）发表了 NCSA Mosaic，这是最早流行的图形接口网页浏</description>
+    </item>
     
     <item>
       <title>浅析URL</title>
