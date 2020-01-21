@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 Jan 2020 23:26:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jan 2020 23:54:36 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript语法</title>
+      <link>http://localhost:1313/post/javascript%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 20 Jan 2020 23:54:36 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/javascript%E8%AF%AD%E6%B3%95/</guid>
+      <description>推荐书籍： 你不知道的 JavaScript（先买上卷，适合进阶） 阮一峰的免费教程 网道 表达式 1+2 表达式的值为 3。 add(1,2）表达式的值为函数的</description>
+    </item>
     
     <item>
       <title>JavaScrip历史及设计缺陷总结</title>
