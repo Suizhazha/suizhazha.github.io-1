@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 20 Jan 2020 23:54:36 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2020 21:00:42 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,6 +27,235 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>JS变量声明，数据类型和类型转换</title>
+      <link>http://localhost:1313/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Sun, 26 Jan 2020 21:00:42 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</guid>
+      
+        <description>&lt;h2 id=&#34;-let&#34;&gt;推荐阅读：《我用了两个月的时间才理解 let》&lt;/h2&gt;
+&lt;h2 id=&#34;heading&#34;&gt;变量声明&lt;/h2&gt;
+&lt;p&gt;三种声明方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;var a = 1&lt;/p&gt;
+&lt;p&gt;var 过时，不好用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;let a = 1&lt;/p&gt;
+&lt;p&gt;let 新的，更合理，用于变量声明。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;const a = 1&lt;/p&gt;
+&lt;p&gt;const 声明必须赋值，不可更改，用于常量声明。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;let-&#34;&gt;let 声明：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;遵循块作用域，使用范围不超过{}。&lt;/li&gt;
+&lt;li&gt;不能重复声明。&lt;/li&gt;
+&lt;li&gt;可以赋值也可不赋值。&lt;/li&gt;
+&lt;li&gt;先声明后使用，否则报错。&lt;/li&gt;
+&lt;li&gt;全局声明的 let 变量，不会变成 window 的属性，但是 var 可以。&lt;/li&gt;
+&lt;li&gt;for 循环配合 let 有奇效（面试题）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;const-&#34;&gt;const 声明：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;规则几乎跟 let 一样。&lt;/li&gt;
+&lt;li&gt;声明时就要赋值，且赋值后不能更改（只读变量，即常量）。&lt;/li&gt;
+&lt;li&gt;无法和 for 配合，因为值不可改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;note&#34;&gt;note：变量声明的时候，既指定了值，也指定了类型。&lt;/h3&gt;
+&lt;h2 id=&#34;js-&#34;&gt;JS 数据类型&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数字 number：
+64 位浮点数存储一个 number，其中符号占 1 位，指数占 11 位（-1023~1024），有效数字占 52 位（省略开头的 1）。&lt;/p&gt;
+&lt;p&gt;note：正 0，负 0 和 0 是不一样的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/26/16fe17d7a0e30f31?w=214&amp;amp;h=196&amp;amp;f=png&amp;amp;s=21429&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;字符串 string：阉割版 UTF8&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单引号&amp;rsquo;&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;双引号&amp;rdquo;&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;反引号``(es6)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;note:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;引号不属于字符串的一部分，例如：
+&amp;lsquo;it&#39;s ok&#39;只表示 it 就结束，而&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&#39;it/&#39;s ok&#39;  //转义,表示it&#39;s ok
+&amp;quot;it&#39;s ok&amp;quot;
+`it&#39;s ok`用反引号`来引用，万能
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;```
+\&#39; 表示&#39;
+\&amp;quot; 表示&amp;quot;
+\\ 表示/
+\n 表示换行
+\r 表示回车
+\t 表示Tab制表符
+\uFFFF 表示对应的Unicode字符
+\xFF表示前256个Unicode字符
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;想在字符串里打会出，可以使用反引号+内容+回车+反引号.&lt;/li&gt;
+&lt;li&gt;&#39; &amp;lsquo;字符串长度为 1，空字符串和空格字符串不同。&lt;/li&gt;
+&lt;li&gt;UTF-8 是 Unicode 的一种存储规则，也叫字符编码规则。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;note：数字和字符串&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;功能不同：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数字能加减乘除，字符串不行。&lt;/li&gt;
+&lt;li&gt;字符串可以表示电话号码，数字不行。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;存储形式不同:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数字：以 64 位浮点数的形式储存。&lt;/li&gt;
+&lt;li&gt;字符串：以 UTF8 形式储存。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;布尔 bool： if&amp;hellip;else&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ture：1==1，4&amp;gt;3 等等。&lt;/li&gt;
+&lt;li&gt;false：！value，1==2 等等。&lt;/li&gt;
+&lt;li&gt;5 个 falsy 值（相当于 false 但又不是 false 的值）：undefined，null，0，NaN 和&amp;rsquo;&#39;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;符号 symbol：用的很少。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;空 undefined 和空 null：JS 独创，没有本质区别。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;若一个变量声明了，但无赋值，则默认为 undefined 默认。&lt;/li&gt;
+&lt;li&gt;而一个函数如果没写 return，则返回值默认为 undefined。&lt;/li&gt;
+&lt;li&gt;有人代码习惯上，非对象的空值为 undefined，对象的空值为 null。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;对象 object：下一篇单独发布。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;note：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数组，函数和日期不是数据类型。&lt;/li&gt;
+&lt;li&gt;数组，函数和日期属于 object。&lt;/li&gt;
+&lt;li&gt;四基两空一对象。&lt;/li&gt;
+&lt;li&gt;undefined，null，number，string，bool，symbol 为简单类型，object 为复杂类型。&lt;/li&gt;
+&lt;li&gt;数据类型大小写无所谓。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;类型转换&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;number=&amp;gt;string&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;String(n)&lt;/li&gt;
+&lt;li&gt;n+&amp;rsquo;&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;string=&amp;gt;number&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Number（s）&lt;/li&gt;
+&lt;li&gt;s - 0&lt;/li&gt;
+&lt;li&gt;+s&lt;/li&gt;
+&lt;li&gt;parseInt（s）&lt;/li&gt;
+&lt;li&gt;parseFloat（s）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;x=&amp;gt;bool&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Boolean(1)&lt;/li&gt;
+&lt;li&gt;!!1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;x=&amp;gt;string - x.toString&lt;/p&gt;
+&lt;p&gt;note：js 的 bug
+&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/26/16fe1d7b91411efe?w=553&amp;amp;h=233&amp;amp;f=png&amp;amp;s=44029&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;js--1&#34;&gt;JS 的奇葩&lt;/h2&gt;
+&lt;p&gt;可查看 JS 的秘密花园&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>系统学习HTTP</title>
+      <link>http://localhost:1313/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/</link>
+      <pubDate>Fri, 24 Jan 2020 21:28:20 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/</guid>
+      
+        <description>&lt;h3 id=&#34;heading&#34;&gt;体系化学习&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;基础概念（必会的）&lt;/li&gt;
+&lt;li&gt;如何调试（用的是 node.js，可以用 log/debugger）&lt;/li&gt;
+&lt;li&gt;查资料（node.js 文档）&lt;/li&gt;
+&lt;li&gt;标准制定者（HTTP 规格文档：RFC 2612 等）&lt;/li&gt;
+&lt;li&gt;CRM 学习法（copy，run，modify）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;http-&#34;&gt;HTTP 基础概念&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;请求动词 路径/查询参数 协议名/版本
+//以上是请求行
+Host：域名或者IP
+Accept： 接收内容
+Content-type：请求体的格式
+//以上为请求头
+
+//请求头和请求体中间要加一个回车
+请求体（上传的内容）
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/22/16fcdb66f6ea2883?w=338&amp;amp;h=381&amp;amp;f=png&amp;amp;s=50536&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Notes：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;请求格式主要分为：请求行，请求头，请求体。&lt;/li&gt;
+&lt;li&gt;请求动词有：GET（获取）/POST（上传）/PUT/PATCH/DELETE 等。&lt;/li&gt;
+&lt;li&gt;请求体在 GET 请求中一般为空。&lt;/li&gt;
+&lt;li&gt;具体文档&lt;a href=&#34;https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html&#34;&gt;RFC 2612 第五章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;大小写随意。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;响应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;协议名/版本 状态码（默认200） 状态字符串
+//以上为状态行
+Content-Type：响应体格式（其他一般不用管）
+//以上为响应头
+
+//响应头和响应体体中间要加一个回车
+响应体（即下载内容）
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/22/16fcdbba5db72f39?w=334&amp;amp;h=148&amp;amp;f=png&amp;amp;s=20138&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Notes：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;响应格式分为状态行，响应头，响应体。&lt;/li&gt;
+&lt;li&gt;常见的状态码是考点。&lt;/li&gt;
+&lt;li&gt;文档在&lt;a href=&#34;https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html&#34;&gt;RFC 2612 第六章&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       
     </item>
