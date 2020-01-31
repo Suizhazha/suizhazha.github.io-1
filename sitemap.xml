@@ -10,20 +10,27 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2020-01-26T21:00:42+08:00</lastmod>
+    <lastmod>2020-01-27T21:13:53+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
-    <lastmod>2020-01-26T21:00:42+08:00</lastmod>
+    <loc>http://localhost:1313/post/javascript%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2020-01-27T21:13:53+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
+    <lastmod>2020-01-27T21:13:53+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
     <lastmod>2020-01-26T21:00:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

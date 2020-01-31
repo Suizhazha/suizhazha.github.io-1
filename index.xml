@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 26 Jan 2020 21:00:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2020 21:13:53 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,6 +27,160 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>JavaScript对象</title>
+      <link>http://localhost:1313/post/javascript%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Mon, 27 Jan 2020 21:13:53 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/javascript%E5%AF%B9%E8%B1%A1/</guid>
+      
+        <description>&lt;h2 id=&#34;-object&#34;&gt;对象 object&lt;/h2&gt;
+&lt;p&gt;唯一复杂数据类型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;定义&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无序的数据集合&lt;/li&gt;
+&lt;li&gt;键值对（name 是键，frank 是值，组成了一对键值对）的集合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;写法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. let obj={&#39;name&#39;:&#39;frank&#39;,&#39;age&#39;:18} //name，age 只能是字符串，就算引号删掉，也还是字符串
+
+2. let obj=new Object({name&#39;:&#39;frank&#39;}) //正规写法，上面是简单写法
+
+3. console.log({&#39;name&#39;:&#39;frank&#39;,&#39;age&#39;:18}) //匿名字符串
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;notes：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;键名 key 是字符串，不是标识符（标识符不能以数字开头的，键名可以用数字），可以包含任意字符（空字符串、空格字符串也合法）&lt;/li&gt;
+&lt;li&gt;引号可省略，省略之后只能写标识符，但中文、空格需要加引号。&lt;/li&gt;
+&lt;li&gt;就算引号省略了，键名也还是字符串！&lt;/li&gt;
+&lt;li&gt;每一个 key 都是对象的属性名，name 是属性名，每一个 value 都是对象的属性值，frank 是属性值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;奇怪的属性名&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所有属性名会自动变成字符串&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; let obj={
+   1:&#39;a&#39;,
+   3.2:&#39;b&#39;,
+   1e2:true,
+   1e-2:true,
+   .234:true,
+   0xFF:true
+ }
+ Object.key(obj)
+ =&amp;gt;[&amp;quot;1&amp;quot;,&amp;quot;100&amp;quot;,&amp;quot;255&amp;quot;,&amp;quot;3.2&amp;quot;,&amp;quot;0.01&amp;quot;,&amp;quot;0.234&amp;quot;]
+ //Object.key(obj)为打出所有的键名（key）
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;变量做属性名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/26/16fe22aca74fd8bd?w=323&amp;amp;h=416&amp;amp;f=png&amp;amp;s=41500&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;notes&#34;&gt;notes：&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;使用变量的值作为 key，需要加[]。&lt;/li&gt;
+&lt;li&gt;不加[]的属性名会自动变成字符串。&lt;/li&gt;
+&lt;li&gt;值如果不是字符串，则自动变成字符串。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;heading&#34;&gt;对象的隐藏属性：&lt;/h2&gt;
+&lt;p&gt;JS 中每一个对象都有一个隐藏属性,这个隐藏属性储存着其共有属性组成的对象的地址,这个共有属性组成的对象叫做原型,即隐藏属性储存着原型的地址。例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/26/16fe2336d606fb73?w=516&amp;amp;h=470&amp;amp;f=png&amp;amp;s=146450&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以使用 obj 访问那些共有属性:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/26/16fe2346a47fe9af?w=292&amp;amp;h=220&amp;amp;f=png&amp;amp;s=31287&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;note：除了字符串，，symbol 也能做属性名，但目前用不到，迭代是会用。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let a=symbol()
+let obj={[a]:&#39;Hello&#39;}
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;增删改查&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;删除属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;delete obj.xxx 或 delete obj[&amp;lsquo;xxx&amp;rsquo;]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notes：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;区分属性值为 undefined 和不含属性名。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;&#39;属性名&#39; in obj&lt;/code&gt;可以查看不管是自身还是共有的属性是否存在。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;delete 只能删属性，不能删除对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看属性&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 查看自身所有属性
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Object.keys(obj)&lt;/code&gt; - 查看自身所有值：
+&lt;code&gt;Object.values(obj)&lt;/code&gt; - 查看自身所有属性和值：
+&lt;code&gt;obj&lt;/code&gt;或&lt;code&gt;Object.entries(obj)&lt;/code&gt; - 查看自身属性和共有属性
+&lt;code&gt;console.dir(obj)&lt;/code&gt; - 也可依次用出 &lt;code&gt;obj.__xxx__&lt;/code&gt;查看共有属性 - 查看单个属性： 1. 中括号语法：&lt;code&gt;obj[&#39;key&#39;]&lt;/code&gt; 2. 点语法：&lt;code&gt;obj.key&lt;/code&gt; 3. 错误语法：&lt;code&gt;obj[key] // 变量 key 值一般不为&#39;key&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Q：如何判断一个属性是自身的还是共有的
+
+A：obj.hasOwnProperty(&#39;toString&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;note：对象的原型也是对象，而原型（对象的根）的原型，值为 null。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;修改或增加属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接赋值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;let obj={name:&#39;frank&#39;} // name是字符串
+obj.name=&#39;frank&#39; // name是字符串
+obj[&#39;name&#39;]=&#39;frank&#39;
+obj[&#39;na&#39;+&#39;me&#39;]=&#39;frank&#39;
+let key=&#39;name&#39;;obj[key]=&#39;frank&#39;
+let key=&#39;name&#39;;obj.key=&#39;frank&#39; // 错误，因为obj.key等价于obj[&#39;key&#39;]
+obj[name]=&#39;frank&#39; // 错误，因为name值不确定
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;批量赋值(ES6 新出的 API)&lt;br&gt;
+&lt;code&gt;Object.assign(obj,{age:18,gender:&#39;man&#39;})&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改或者增加共有属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;无法通过自身修改或增加共有属性&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let obj={},obj2={} // 共有 toString
+obj.toString=&#39;xxx&#39;//只会在改 obj 自身属性
+obj2.toString //还是在原型上
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;若非要修改或增加原型上的属性&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;obj.__proto__.toString=&#39;xxx&#39; // 不推荐用__proto__
+Object.prototype.toString=&#39;xxx&#39;
+//一般来说，永远不要修改原型，会引起很多问题，比如代码崩溃，代码异常
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;修改隐藏属性:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不推荐使用 proto&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let obj={name:&#39;frank&#39;}
+let obj2={name:&#39;jack&#39;}
+let common={kind:&#39;human&#39;}
+obj.__proto__=common
+obj2.__proto__=common
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;推荐使用 Object.create&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let obj=Object.create(common)
+obj.name=&#39;frank&#39;
+let obj=Object.create(common)
+obj2.name=&#39;suixin&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
