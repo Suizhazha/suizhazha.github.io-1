@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 31 Jan 2020 15:10:34 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 23:57:11 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS函数</title>
+      <link>http://localhost:1313/post/js%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sat, 01 Feb 2020 23:57:11 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E5%87%BD%E6%95%B0/</guid>
+      <description>函数是一种特殊的对象 定义一个函数 具名函数 function 函数名(形参1，形参2){ 语句 return 返回值 } 匿名函数（去掉函数名） let a =function(x,y){ return x+y }//也叫函数表达式 not</description>
+    </item>
     
     <item>
       <title>JS数组</title>
