@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 01 Feb 2020 23:57:11 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Feb 2020 21:00:25 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,6 +28,165 @@
 &lt;/ul&gt;
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>JS运算符</title>
+      <link>http://localhost:1313/post/js%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Mon, 03 Feb 2020 21:00:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      
+        <description>&lt;h2 id=&#34;heading&#34;&gt;算数运算符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;number 运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;加减乘除&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;余数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;-1 % 7的余数为 -1//提个负号，加 1 % 7的余数
+//正常数学-1 % 7=== 6 % 7 的余数
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;指数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;7 ** 2 //49
+7 ** 3 //343
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;自增自减&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;a++//a在前，值为前
+++a//a在后，值为后
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;求值运算符&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;var a = 8
++a
+//8,＋号后面取任何数，都是取这个数的值
+
+var a = - 8
++a
+//-8
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;负数运算符&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;var a = - 8
+-a
+//8,正数变负数，负数变正数
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;string-&#34;&gt;string 运算符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;连接运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;&#39;1&#39;+&#39;2&#39;
+//&amp;quot;12&amp;quot;,只支持加号
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;js 独有：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 +&#39;2&#39;
+//&amp;quot;12&amp;quot;,JS会将数字变成字符串再连接
+
+&#39;2&#39; - 1
+// 1 ,字符串不支持减号，JS会将字符串变成数字再运算
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;note：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;少写自增自减&lt;/li&gt;
+&lt;li&gt;不同类型不要加起来&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;比较运算符&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;==&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/2/3/1700aa45bb630e62?w=344&amp;amp;h=315&amp;amp;f=png&amp;amp;s=78224&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0 == []
+0 == &#39;0&#39;
+0 == &#39;\t&#39;
+//ture，但右边三个互不相等
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;永远不要使用 == ，==自作聪明会自动类型转换，使用 === 。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;===&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基本类型看值是否相等&lt;/li&gt;
+&lt;li&gt;对象看地址是否相等&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;note:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;NaN != NaN
+[]===[]
+//false,对象看地址
+{}==={}
+//false
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;heading-2&#34;&gt;布尔运算符&lt;/h2&gt;
+&lt;p&gt;|| &amp;amp;&amp;amp; ！&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;console&amp;amp;&amp;amp;console.log&amp;amp;&amp;amp;console.log(&#39;hi&#39;)
+//防止console被改写，不存在console报错
+
+a = a || 100
+//100,a的保底值，可能有bug
+
+function add(n =0){
+    return n+1
+}
+//最新语法，保底值
+add(null)
+//1
+add(undefined)
+//1
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;heading-3&#34;&gt;二进制运算符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;或 | 与 &amp;amp; 否 ~(只能二进制运算)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;0b11
+//3
+
+0b1111 | 0b1010
+//15，结果会以十进制展示
+(0b1111 | 0b1010).toString(2)
+//&amp;quot;1111&amp;quot;,二进制展示，两位比较都为0，结果为0，否则为1
+
+(0b1111 &amp;amp; 0b1010).toString(2)
+//&amp;quot;1010&amp;quot;两位比较都为1，结果为1，否则为0
+
+(~0b1111).toString(2)
+//&amp;quot;-10000&amp;quot;自动补一个1
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;异或 ^&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两个位相同，则结果为 0，否则为 1&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(0b1111 ^ 0b1010).toString(2)
+//&amp;quot;101&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;左移右移 &amp;laquo; &amp;raquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;(0b0010 &amp;gt;&amp;gt; 1 ).toString(2)
+// &amp;quot;1&amp;quot;
+(0b0010 &amp;lt;&amp;lt; 1 ).toString(2)
+// &amp;quot;100&amp;quot;
+(0b0011 &amp;gt;&amp;gt; 1 ).toString(2)
+// &amp;quot;1&amp;quot; “吃掉”最右边的 1
+(0b0011 &amp;lt;&amp;lt; 1 ).toString(2)
+// &amp;quot;110&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;头部补零 的右移运算符 &amp;raquo;&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;(0b1011 &amp;gt;&amp;gt;&amp;gt; 1 ).toString(2)
+// &amp;quot;101&amp;quot;,正数的右移和头部补零的右移完全一样
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;heading-4&#34;&gt;使用与运算符判断奇偶&lt;/h3&gt;
+&lt;p&gt;奇数 &amp;amp; 1 = 1
+偶数 &amp;amp; 1 = 0&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;7 &amp;amp; 0b001
+// 1 奇数
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;heading-5&#34;&gt;使用~,&amp;raquo;,&amp;laquo;,&amp;raquo;&amp;gt;,|取整&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;console.log(~~ 6.83)//6
+console.log(6.83 &amp;gt;&amp;gt; 0)//6
+console.log(6.83 &amp;lt;&amp;lt; 0)//6
+console.log(6.83 | 0)//6
+console.log(6.83 &amp;gt;&amp;gt;&amp;gt; 0)//6
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;-ab-&#34;&gt;使用^交换 a,b 的值&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;最新的语法
+&lt;/code&gt;&lt;/pre&gt;</description>
       
     </item>
     
