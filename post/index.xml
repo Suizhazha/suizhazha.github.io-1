@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 04 Feb 2020 22:38:49 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 06 Feb 2020 22:33:46 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>算法入门下</title>
+      <link>http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/</link>
+      <pubDate>Thu, 06 Feb 2020 22:33:46 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/</guid>
+      <description>选择排序(续) 重写 minIndex 循环思路： let minIndex = (numbers) =&amp;gt; { let index = 0 for(let i = 1;i &amp;lt; numbers.length; i++){ if(numbers[i] &amp;lt; numbers[index]){ index = 1 } } return index } 重写 sort let sort = (numbers) =&amp;gt; { for(let i=0;i&amp;lt;numbers.length - 1;i++){ console.log(`----`) console.log(`i: ${i}`) let index = minIndex(numbers.slice(i)) + i //若循环</description>
+    </item>
     
     <item>
       <title>算法入门上</title>
