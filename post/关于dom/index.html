@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>算法入门下 - Jane - A super concise theme for Hugo</title>
+  <title>关于DOM - Jane - A super concise theme for Hugo</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="suixin" />
-  <meta name="description" content="选择排序(续) 重写 minIndex 循环思路： let minIndex = (numbers) =&amp;gt; { let index = 0 for(let i = 1;i &amp;lt; numbers.length; i&#43;&#43;){ if(numbers[i] &amp;lt; numbers[index]){ index = 1 } } return index } 重写 sort let sort = (numbers) =&amp;gt; { for(let i=0;i&amp;lt;numbers.length - 1;i&#43;&#43;){ console.log(`----`) console.log(`i: ${i}`) let index = minIndex(numbers.slice(i)) &#43; i //若循环" />
+  <meta name="description" content="DOM:文档对象模型(Document Object Model) API 获取任意元素，也叫标签 window.idxxx或直接idxxx document.getElementByid(&#39;idxxx&#39;) //获取与全局属性冲突的id document.getElementsByTagName(&#39;div&#39;)[0] /" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -35,7 +35,7 @@
 <meta name="generator" content="Hugo 0.62.0" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/" />
+<link rel="canonical" href="http://localhost:1313/post/%E5%85%B3%E4%BA%8Edom/" />
 
 
 
@@ -59,23 +59,23 @@
 
 
 
-<meta property="og:title" content="算法入门下" />
-<meta property="og:description" content="选择排序(续) 重写 minIndex 循环思路： let minIndex = (numbers) =&gt; { let index = 0 for(let i = 1;i &lt; numbers.length; i&#43;&#43;){ if(numbers[i] &lt; numbers[index]){ index = 1 } } return index } 重写 sort let sort = (numbers) =&gt; { for(let i=0;i&lt;numbers.length - 1;i&#43;&#43;){ console.log(`----`) console.log(`i: ${i}`) let index = minIndex(numbers.slice(i)) &#43; i //若循环" />
+<meta property="og:title" content="关于DOM" />
+<meta property="og:description" content="DOM:文档对象模型(Document Object Model) API 获取任意元素，也叫标签 window.idxxx或直接idxxx document.getElementByid(&#39;idxxx&#39;) //获取与全局属性冲突的id document.getElementsByTagName(&#39;div&#39;)[0] /" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/" />
-<meta property="article:published_time" content="2020-02-06T22:33:46+08:00" />
-<meta property="article:modified_time" content="2020-02-06T22:33:46+08:00" />
-<meta itemprop="name" content="算法入门下">
-<meta itemprop="description" content="选择排序(续) 重写 minIndex 循环思路： let minIndex = (numbers) =&gt; { let index = 0 for(let i = 1;i &lt; numbers.length; i&#43;&#43;){ if(numbers[i] &lt; numbers[index]){ index = 1 } } return index } 重写 sort let sort = (numbers) =&gt; { for(let i=0;i&lt;numbers.length - 1;i&#43;&#43;){ console.log(`----`) console.log(`i: ${i}`) let index = minIndex(numbers.slice(i)) &#43; i //若循环">
-<meta itemprop="datePublished" content="2020-02-06T22:33:46&#43;08:00" />
-<meta itemprop="dateModified" content="2020-02-06T22:33:46&#43;08:00" />
-<meta itemprop="wordCount" content="366">
+<meta property="og:url" content="http://localhost:1313/post/%E5%85%B3%E4%BA%8Edom/" />
+<meta property="article:published_time" content="2020-02-09T21:02:40+08:00" />
+<meta property="article:modified_time" content="2020-02-09T21:02:40+08:00" />
+<meta itemprop="name" content="关于DOM">
+<meta itemprop="description" content="DOM:文档对象模型(Document Object Model) API 获取任意元素，也叫标签 window.idxxx或直接idxxx document.getElementByid(&#39;idxxx&#39;) //获取与全局属性冲突的id document.getElementsByTagName(&#39;div&#39;)[0] /">
+<meta itemprop="datePublished" content="2020-02-09T21:02:40&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-09T21:02:40&#43;08:00" />
+<meta itemprop="wordCount" content="783">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="算法入门下"/>
-<meta name="twitter:description" content="选择排序(续) 重写 minIndex 循环思路： let minIndex = (numbers) =&gt; { let index = 0 for(let i = 1;i &lt; numbers.length; i&#43;&#43;){ if(numbers[i] &lt; numbers[index]){ index = 1 } } return index } 重写 sort let sort = (numbers) =&gt; { for(let i=0;i&lt;numbers.length - 1;i&#43;&#43;){ console.log(`----`) console.log(`i: ${i}`) let index = minIndex(numbers.slice(i)) &#43; i //若循环"/>
+<meta name="twitter:title" content="关于DOM"/>
+<meta name="twitter:description" content="DOM:文档对象模型(Document Object Model) API 获取任意元素，也叫标签 window.idxxx或直接idxxx document.getElementByid(&#39;idxxx&#39;) //获取与全局属性冲突的id document.getElementsByTagName(&#39;div&#39;)[0] /"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -337,11 +337,11 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">算法入门下</h1>
+      <h1 class="post-title">关于DOM</h1>
       
       <div class="post-meta">
-        <time datetime="2020-02-06" class="post-time">
-          2020-02-06
+        <time datetime="2020-02-09" class="post-time">
+          2020-02-09
         </time>
         
         
@@ -361,15 +361,12 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">选择排序(续)</a>
+    <li><a href="#api">API</a></li>
+    <li><a href="#node">Node</a>
       <ul>
-        <li><a href="#-minindex">重写 minIndex</a></li>
-        <li><a href="#-sort">重写 sort</a></li>
+        <li><a href="#heading">节点的增删改查</a></li>
       </ul>
     </li>
-    <li><a href="#heading-1">快速排序</a></li>
-    <li><a href="#heading-2">归并排序</a></li>
-    <li><a href="#heading-3">计数排序</a></li>
   </ul>
 </nav>
   </div>
@@ -377,105 +374,198 @@
 
     
     <div class="post-content">
-      <h2 id="heading">选择排序(续)</h2>
-<h3 id="-minindex">重写 minIndex</h3>
-<p>循环思路：</p>
-<pre><code>let minIndex = (numbers) =&gt; {
-    let index = 0
-    for(let i = 1;i &lt; numbers.length; i++){
-        if(numbers[i] &lt; numbers[index]){
-            index = 1
+      <p>DOM:文档对象模型(Document Object Model)</p>
+<h2 id="api">API</h2>
+<ul>
+<li>获取任意元素，也叫标签</li>
+</ul>
+<pre><code>window.idxxx或直接idxxx
+
+document.getElementByid('idxxx')
+//获取与全局属性冲突的id
+
+document.getElementsByTagName('div')[0]
+//获取所有标签名为div的元素，因为是全部div，需要下标获取单独的div
+
+document.getElementsByClassName('div')[0]
+//获取class的类名元素
+
+document.querySelector('#idxxx')
+//获取id
+
+document.querySelector('div&gt;span:nth-child(2  )')
+
+document.querySelectorAll('.red')[0]
+</code></pre><p>notes：</p>
+<ol>
+<li>兼容 IE 才用 getElement(s)Byxxx</li>
+<li>工作用 querySelector 和 querySelectorAll</li>
+<li>做 demo 直接用 idxxx</li>
+</ol>
+<ul>
+<li>获取特定元素</li>
+</ul>
+<pre><code>document.documentElement
+//获取html元素
+
+document.head
+//获取head元素
+
+document.body
+//获取body元素
+
+window
+//获取窗口（窗口不是元素），为添加全局的事件监听
+
+document.all
+//获取所有元素，IE发明的，在其他浏览器里为假值，为第六个falsy值
+</code></pre><h2 id="node">Node</h2>
+<p>x.nodeType 可以得到一个数字，其中</p>
+<ol>
+<li>元素 Element，也叫便签 Tag</li>
+<li>文本 text</li>
+<li>注释 Comment</li>
+<li>文档 Document</li>
+<li>表示文档片段 DocumentFragment</li>
+</ol>
+<h3 id="heading">节点的增删改查</h3>
+<ul>
+<li>
+<p>增</p>
+<ol>
+<li>创建一个标签节点</li>
+</ol>
+<pre><code>let div1 = document.createElement('div')
+document.createElement('style')
+document.createElement('script')
+</code></pre><ol start="2">
+<li>创建一个文本节点</li>
+</ol>
+<pre><code>text1 = document.createTextNode('你好')
+</code></pre><ol start="3">
+<li>标签里插文本</li>
+</ol>
+<pre><code>div1.appendChild(text1)
+//Node接口
+或者
+div1.innerText = '你好'
+或者
+div1.textContent = '你好'
+//Element接口
+</code></pre><ol start="4">
+<li>插入页面里
+创建的标签默认在 JS 线程中，必须插到 head 或 body 中，才会生效</li>
+</ol>
+<pre><code>document.body.appendChild(div1)
+</code></pre></li>
+<li>
+<p>删</p>
+<pre><code>div1.parentNode.removechild(div1)
+//从DOM中删除div1，但还在内存中，而div1 = null可彻底移除
+或者
+div1.remove()
+//IE不支持
+
+document.body.appendChild(div1)
+//  恢复div1
+</code></pre></li>
+<li>
+<p>改</p>
+<ol>
+<li>修改属性</li>
+</ol>
+<pre><code>div1.className = 'red'
+//全覆盖
+div1.classList.add('green')
+//新语法，推荐
+
+div1.style.color = 'bule'
+//修改部分样式
+
+div1.style.backgroundColor = 'white'
+</code></pre><ol start="2">
+<li>改事件处理函数</li>
+</ol>
+<pre><code>div1.onclick = function(x){
+    console.log(this)
+    console.log(arguments[0])
+}
+//当用户点击div时，该this为div，arguments[0] 是事件相关的信息组成的对象
+
+div1.addEventListener
+//div1.onclick升级版
+</code></pre><ol start="3">
+<li>修改内容</li>
+</ol>
+<pre><code>text.innerText = 'hi'
+或者
+text.textContent = 'hi'
+//修改文本内容
+
+div.innerHTML = '&lt;strong&gt;hi&lt;/strong&gt;'
+//修改HTML内容
+
+div.innerHTML = ''
+div.appendChild(div1)
+//修改标签，先清空，再修改
+</code></pre><ol start="4">
+<li>修改 parent</li>
+</ol>
+<pre><code>newParent.appendChild(div)
+</code></pre></li>
+<li>
+<p>读</p>
+<pre><code>div1.classList
+或者
+div1.getAttribute('class')
+//但两种获取的值可能有所不同
+</code></pre></li>
+<li>
+<p>查</p>
+<ol>
+<li>查 parent</li>
+</ol>
+<pre><code>node.parentNode
+或
+node.parentElement
+</code></pre><ol start="2">
+<li>查 child</li>
+</ol>
+<pre><code>node.childNodes
+//包括文本节点
+或
+node.children
+//不包括文本节点，推荐
+</code></pre><ol start="3">
+<li>查兄弟</li>
+</ol>
+<pre><code>node.perentNode.children
+//需要利用遍历排除自己
+</code></pre><ol start="4">
+<li>查看老大老幺</li>
+</ol>
+<pre><code>node.firstChild
+node.lastChild
+</code></pre><ol start="5">
+<li>查看上一个哥哥或下一个弟弟</li>
+</ol>
+<pre><code>node.previousSibling
+node.nextSibling
+</code></pre><ol start="6">
+<li>遍历一个 div 中所有元素</li>
+</ol>
+<pre><code>travel = (node, fn) =&gt; {
+    fn(node)
+    if(node.children){
+        for(let i = 0;i&lt;node.children.length;i++){
+            travel(node.children[i],fn)
         }
     }
-    return index
 }
-</code></pre><h3 id="-sort">重写 sort</h3>
-<pre><code>let sort = (numbers) =&gt; {
-    for(let i=0;i&lt;numbers.length - 1;i++){
-    console.log(`----`)
-    console.log(`i: ${i}`)
-    let index = minIndex(numbers.slice(i)) + i
-    //若循环已经找到第一个最小的数字，则之后再找最小时，忽略第一个
-    console.log(`index: ${index}`)
-    console.log(`min: ${numbers[index]}`)
-    if(index!==i){
-    swap(number,index,i)
-    console.log(`swap ${index}: ${i}`)
-    console.log(numbers)
-    }
-  }
-  return numbers
-}
+travel( div1,(node) =&gt; console.log(node) )
+</code></pre></li>
+</ul>
 
-let minIndex = (numbers) =&gt; {
-    let index = 0
-    for(let i = 1;i &lt; numbers.length; i++){
-        if(numbers[i] &lt; numbers[index]){
-            index = 1
-        }
-    }
-    return index
-}
-
-let swap = (array, i, j) =&gt; {
-    let temp = array[i]
-    array[i] = array[j]
-    array[j] = temp
-}//array为对象，传参复制地址
-</code></pre><h2 id="heading-1">快速排序</h2>
-<p>递归思路：</p>
-<pre><code>let quickSort = arr =&gt; {
-    if(arr.length &lt;= 1){ return arr }
-    let pivotIndex = Math.floor(arr.length / 2)
-    let pivot = arr.splice(pivotIndex, 1)[0]
-    let left = []
-    let right = []
-    for (let i =0;i &lt; arr.length; i++){
-        if  (arr[i] &lt; pivot){
-            left.push(arr[i])
-        } else {
-            right.push(arr[i])
-        }
-    }
-    return quickSort(left).concat([povit],quickSort(right) )
-}
-</code></pre><h2 id="heading-2">归并排序</h2>
-<pre><code>let mergeSort = arr =&gt;{
-  let k = arr.length
-  if(k===1){return arr}
-  let left = arr.slice(0, Math.floor(k/2))
-  let right = arr.slice(Math.floor(k/2))
-  return merge(mergeSort(left), mergeSort(right))
-}
-let merge = (a, b) =&gt; {
-  if(a.length === 0) return b
-  if(b.length === 0) return a
-  return a[0] &gt; b[0] ?
-     [b[0]].concat(merge(a, b.slice(1))) :
-     [a[0]].concat(merge(a.slice(1), b))
-}
-</code></pre><h2 id="heading-3">计数排序</h2>
-<pre><code>let countSort = arr =&gt;{
-  let hashTable = {}, max = 0, result = []
-  for(let i=0; i&lt;arr.length; i++){ // 遍历数组
-    if(!(arr[i] in hashTable)){
-      hashTable[arr[i]] = 1
-    }else{
-      hashTable[arr[i]] += 1
-    }
-    if(arr[i] &gt; max) {max = arr[i]}
-  }
-  for(let j=0; j&lt;=max; j++){ // 遍历哈希表
-    if(j in hashTable){
-      for(let i = 0; i&lt;hashTable[j]; i++){
-        result.push(j)
-      }
-    }
-  }
-  return result
-}
-
-</code></pre>
     </div>
 
     
@@ -488,7 +578,7 @@ let merge = (a, b) =&gt; {
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-      2020-02-06
+      2020-02-09
       
     </span>
   </p>
@@ -509,22 +599,9 @@ let merge = (a, b) =&gt; {
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/%E5%85%B3%E4%BA%8Edom/">
-            
-            <i class="iconfont">
-              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
-</svg>
-
-            </i>
-            <span class="prev-text nav-default">关于DOM</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
         
-          <a class="next" href="/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/">
-            <span class="next-text nav-default">算法入门上</span>
+          <a class="next" href="/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/">
+            <span class="next-text nav-default">算法入门下</span>
             <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">

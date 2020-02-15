@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 06 Feb 2020 22:33:46 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2020 21:02:40 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,6 +27,208 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>关于DOM</title>
+      <link>http://localhost:1313/post/%E5%85%B3%E4%BA%8Edom/</link>
+      <pubDate>Sun, 09 Feb 2020 21:02:40 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%85%B3%E4%BA%8Edom/</guid>
+      
+        <description>&lt;p&gt;DOM:文档对象模型(Document Object Model)&lt;/p&gt;
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;获取任意元素，也叫标签&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;window.idxxx或直接idxxx
+
+document.getElementByid(&#39;idxxx&#39;)
+//获取与全局属性冲突的id
+
+document.getElementsByTagName(&#39;div&#39;)[0]
+//获取所有标签名为div的元素，因为是全部div，需要下标获取单独的div
+
+document.getElementsByClassName(&#39;div&#39;)[0]
+//获取class的类名元素
+
+document.querySelector(&#39;#idxxx&#39;)
+//获取id
+
+document.querySelector(&#39;div&amp;gt;span:nth-child(2  )&#39;)
+
+document.querySelectorAll(&#39;.red&#39;)[0]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;notes：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;兼容 IE 才用 getElement(s)Byxxx&lt;/li&gt;
+&lt;li&gt;工作用 querySelector 和 querySelectorAll&lt;/li&gt;
+&lt;li&gt;做 demo 直接用 idxxx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;获取特定元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;document.documentElement
+//获取html元素
+
+document.head
+//获取head元素
+
+document.body
+//获取body元素
+
+window
+//获取窗口（窗口不是元素），为添加全局的事件监听
+
+document.all
+//获取所有元素，IE发明的，在其他浏览器里为假值，为第六个falsy值
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;node&#34;&gt;Node&lt;/h2&gt;
+&lt;p&gt;x.nodeType 可以得到一个数字，其中&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;元素 Element，也叫便签 Tag&lt;/li&gt;
+&lt;li&gt;文本 text&lt;/li&gt;
+&lt;li&gt;注释 Comment&lt;/li&gt;
+&lt;li&gt;文档 Document&lt;/li&gt;
+&lt;li&gt;表示文档片段 DocumentFragment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;heading&#34;&gt;节点的增删改查&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;增&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建一个标签节点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;let div1 = document.createElement(&#39;div&#39;)
+document.createElement(&#39;style&#39;)
+document.createElement(&#39;script&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;创建一个文本节点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;text1 = document.createTextNode(&#39;你好&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;标签里插文本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;div1.appendChild(text1)
+//Node接口
+或者
+div1.innerText = &#39;你好&#39;
+或者
+div1.textContent = &#39;你好&#39;
+//Element接口
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;插入页面里
+创建的标签默认在 JS 线程中，必须插到 head 或 body 中，才会生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;document.body.appendChild(div1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;div1.parentNode.removechild(div1)
+//从DOM中删除div1，但还在内存中，而div1 = null可彻底移除
+或者
+div1.remove()
+//IE不支持
+
+document.body.appendChild(div1)
+//  恢复div1
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;改&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;修改属性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;div1.className = &#39;red&#39;
+//全覆盖
+div1.classList.add(&#39;green&#39;)
+//新语法，推荐
+
+div1.style.color = &#39;bule&#39;
+//修改部分样式
+
+div1.style.backgroundColor = &#39;white&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;改事件处理函数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;div1.onclick = function(x){
+    console.log(this)
+    console.log(arguments[0])
+}
+//当用户点击div时，该this为div，arguments[0] 是事件相关的信息组成的对象
+
+div1.addEventListener
+//div1.onclick升级版
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;修改内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;text.innerText = &#39;hi&#39;
+或者
+text.textContent = &#39;hi&#39;
+//修改文本内容
+
+div.innerHTML = &#39;&amp;lt;strong&amp;gt;hi&amp;lt;/strong&amp;gt;&#39;
+//修改HTML内容
+
+div.innerHTML = &#39;&#39;
+div.appendChild(div1)
+//修改标签，先清空，再修改
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;修改 parent&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;newParent.appendChild(div)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;读&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;div1.classList
+或者
+div1.getAttribute(&#39;class&#39;)
+//但两种获取的值可能有所不同
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;查 parent&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;node.parentNode
+或
+node.parentElement
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;查 child&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;node.childNodes
+//包括文本节点
+或
+node.children
+//不包括文本节点，推荐
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;查兄弟&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;node.perentNode.children
+//需要利用遍历排除自己
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;查看老大老幺&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;node.firstChild
+node.lastChild
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;查看上一个哥哥或下一个弟弟&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;node.previousSibling
+node.nextSibling
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;遍历一个 div 中所有元素&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;travel = (node, fn) =&amp;gt; {
+    fn(node)
+    if(node.children){
+        for(let i = 0;i&amp;lt;node.children.length;i++){
+            travel(node.children[i],fn)
+        }
+    }
+}
+travel( div1,(node) =&amp;gt; console.log(node) )
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
