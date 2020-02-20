@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 15 Feb 2020 22:48:52 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2020 23:25:11 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>异步和promise</title>
+      <link>http://localhost:1313/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</link>
+      <pubDate>Tue, 18 Feb 2020 23:25:11 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</guid>
+      <description>异步 相关解释： 若能直接拿到结果，不拿到结果不离开,就是同步。 例如：去医院挂号，拿到号才能离开窗口。 不能直接拿到结果，则是异步。 例如：去餐厅门</description>
+    </item>
     
     <item>
       <title>关于jQuery</title>
@@ -180,15 +189,6 @@
       
       <guid>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
       <description>大家好，上星期在饥人谷学习了 HTML 的历史概述，语法和一些常用标签。前几天因为收拾东西回家，此笔记一直没有写完。今天整理完成后分享给大家，如有错误</description>
-    </item>
-    
-    <item>
-      <title>开博大吉</title>
-      <link>http://localhost:1313/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
-      <pubDate>Fri, 27 Dec 2019 21:34:52 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
-      <description>大家好，我的博客开通了，希望我能写出好文章给大家看</description>
     </item>
     
   </channel>

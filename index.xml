@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 15 Feb 2020 22:48:52 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2020 23:25:11 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,6 +27,193 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>异步和promise</title>
+      <link>http://localhost:1313/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</link>
+      <pubDate>Tue, 18 Feb 2020 23:25:11 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</guid>
+      
+        <description>&lt;h2 id=&#34;heading&#34;&gt;异步&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;相关解释：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;若能直接拿到结果，不拿到结果不离开,就是同步。&lt;/p&gt;
+&lt;p&gt;例如：去医院挂号，拿到号才能离开窗口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不能直接拿到结果，则是异步。&lt;/p&gt;
+&lt;p&gt;例如：去餐厅门口等位，可以拿到号去逛逛，而每 10 分钟去餐厅问一下，为轮询，扫码用微信接收通知，就是回调。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;轮询和回调都能拿到结果，只是方式不同。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以 AJAX 为例，&lt;code&gt;request.send()&lt;/code&gt;后，并不能直接拿到&lt;code&gt;request.response&lt;/code&gt;,必须等到 readyState 变 4 后，浏览器才回头调用(回调)&lt;code&gt;request.onreadystatechange()&lt;/code&gt;，之后才能得到&lt;code&gt;request.response&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回调 callback&lt;/p&gt;
+&lt;p&gt;写了一个函数 A，传给另一个函数 B 调用，那么函数 A 就是回调。&lt;/p&gt;
+&lt;p&gt;例如：有的时候回调还可以传给一个对象，&lt;code&gt;request.onreadystatechange()&lt;/code&gt;就是写给浏览器调用的，就是让浏览器将来回头调用一下这个函数。&lt;/p&gt;
+&lt;p&gt;再例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function f1(){}
+function f2(fn){
+    fn()
+}
+
+ f2(f1)
+//自己没有调用f1，而f2调用了f1,f1就是回调，f2为自己调用的
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;异步和回调的关系&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;关联：异步任务在需要在得到结果时通知 JS 来拿结果，让 JS 留一个函数地址给浏览器，异步任务完成时浏览器调用该函数地址即可，同时将结果作为参数传给该函数该函数就是写给浏览器调用的，为回调函数。&lt;/li&gt;
+&lt;li&gt;区别：异步任务需要用到回调函数来通知结果，但回调函数不一定只用在异步任务中，回调还可以用到同步任务中。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;array.forEach(n=&amp;gt;console.log())
+//同步回调
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;判断同步异步&lt;/p&gt;
+&lt;p&gt;如果一个函数返回值处于&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;setTimeout&lt;/li&gt;
+&lt;li&gt;AJAX(即 XMLHttpRequest)&lt;/li&gt;
+&lt;li&gt;AddEventListener&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上述三个函数内部，那么这个函数就是异步函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;promise&#34;&gt;promise&lt;/h2&gt;
+&lt;p&gt;异步任务有两个结果时，可以用一个回调接收两个参数，还可以使用两个回调，但两个方法都有问题，而 promise 正好解决了这些问题。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;代码更规范。&lt;/li&gt;
+&lt;li&gt;容易出现回调地狱，让代码可读性更强。&lt;/li&gt;
+&lt;li&gt;方便进行错误处理。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以简单的 AJAX 的封装为例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ajax = (method,url,options) =&amp;gt;{
+
+    //析构赋值，从options里拿出两个变量，后面直接使用
+    const {success,fail} = options
+
+    const request = new XMLHttpRequest();
+    request.open(method，url);
+    request.onreadystatechange = () =&amp;gt;{
+    if (request.readyState === 4) {
+
+        //成功就调用 success，失败则调用fail
+        if (request.status &amp;lt; 400) {
+            success.call(null,request.response)
+            }else if(request.status &amp;gt;= 400){
+                fail.call(null,request,request.status)
+                 }
+         }
+    }
+    request.send()
+}//封装完成
+
+ajax(&#39;get&#39;,&#39;/xxx&#39;,{
+
+    //左边是function缩写，右边为箭头函数
+    success(response){},fail:(request,status) =&amp;gt;{}
+})//调用
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;使用 promise 修改：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ajax = (method,url,options) =&amp;gt;{
+
+    //new Promise接收一个函数
+    return new Promise((resolve,reject)=&amp;gt;{
+        const {success,fail} = options//析构赋值
+        const request = new XMLHttpRequest();
+        request.open(method，url);
+        request.onreadystatechange = () =&amp;gt;{
+        if (request.readyState === 4) {
+
+            //成功就调用 resolve，失败则调用reject
+            if (request.status &amp;lt; 400) {
+                resolve.call(null,request.response)
+            }else if(request.status &amp;gt;= 400){
+                reject.call(null,request)
+                 }
+         }
+    }
+    request.send()
+  })
+}//封装完成
+
+ajax(&#39;get&#39;,&#39;/xxx&#39;)
+    .then((response) =&amp;gt; {}, (request)=&amp;gt;{})
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;虽然也是回调，但不需要记 success，fail。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;then 的第一个参数为 success，第二个参数为 fail。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ajax()返回了一个.then()方法的对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;背下&lt;code&gt;return new Promise((resolve,reject)=&amp;gt;{})&lt;/code&gt;以后就理解了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如何将一个回调的异步函数改成 promise 异步函数：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先 &lt;code&gt;return new Promise((resolve,reject)=&amp;gt;{...})&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;任务成功调用&lt;code&gt;resolve(result)&lt;/code&gt;，任务失败调用&lt;code&gt;reject(error)&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;resolve 和 reject 会再去调用成功和失败函数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再使用.then(success,fail)传入成功和失败函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;jqueryajax&#34;&gt;jQuery.ajax&lt;/h2&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;支持更多形式的参数&lt;/li&gt;
+&lt;li&gt;支持 Promise&lt;/li&gt;
+&lt;li&gt;支持功能更多&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-axios&#34;&gt;但现在很少使用了，专业前端都用 axios&lt;/h3&gt;
+&lt;h2 id=&#34;axios&#34;&gt;axios&lt;/h2&gt;
+&lt;p&gt;最新的 AJAX 库，抄袭了 jQuery 的封装思路 ，&lt;a href=&#34;https://juejin.im/post/5a9cddb46fb9a028bc2d3c2f&#34;&gt;推荐方方的博客&lt;/a&gt;快速了解 axiosd 的用法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码示例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;axios.get
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;axios 高级用法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;JSON 自动处理&lt;/p&gt;
+&lt;p&gt;axios 发现响应的 Content-Type 是 json，就会自动调用 JSON.parse。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;请求拦截器&lt;/p&gt;
+&lt;p&gt;可以在所有请求里加东西，如加查询参数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;响应拦截器&lt;/p&gt;
+&lt;p&gt;可以在所有响应里加东西，甚至改内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以生成不同实例（对象）&lt;/p&gt;
+&lt;p&gt;不同实例可以设置不同配置，用于复杂场景。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       
     </item>
@@ -2997,146 +3184,6 @@ onblur：用户鼠标离开时触发。&lt;/p&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;在 github settings 中找到 GitHub Pages，点击&lt;code&gt;https://github用户名.github.io/&lt;/code&gt;即可&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>HTML入门笔记</title>
-      <link>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Wed, 01 Jan 2020 21:59:13 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
-      
-        <description>&lt;h2 id=&#34;-html--&#34;&gt;大家好，上星期在饥人谷学习了 HTML 的历史概述，语法和一些常用标签。前几天因为收拾东西回家，此笔记一直没有写完。今天整理完成后分享给大家，如有错误之处，欢迎指正！（没有奖励 😝）&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;-html-&#34;&gt;首先是关于 HTML 的历史:&lt;/h3&gt;
-&lt;p&gt;HTML（英文：HyperText Markup Language，中文：超文本标记语言）由英国计算机科学家 Timothy John Berners-Lee 创立，同时他也是万维网的发明者。而万维网（WWW）包括了 URL，HTML 以及 HTTP，本篇只简单介绍下 HTML。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;html-&#34;&gt;HTML 起手式&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;!+tab键即可出现下图代码；
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6b8a34d79cf43?w=509&amp;amp;h=252&amp;amp;f=png&amp;amp;s=33005&#34; alt=&#34;&#34;&gt;
-其中&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;
-为文档类型&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&lt;/code&gt;
-html 标签，可改 zh-cn&lt;/p&gt;
-&lt;p&gt;而 head 标签内为看不到的元素。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot; /&amp;gt;&lt;/code&gt;
-字符编码&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot; /&amp;gt;&lt;/code&gt;
-为防止页面缩放，用于兼容手机。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot; /&amp;gt;&lt;/code&gt;
-可要求 Ie 升级到最新内核（11）&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;&lt;/code&gt;
-为标题&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;heading&#34;&gt;章节标签&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;标题 h1~h6&lt;/li&gt;
-&lt;li&gt;章节 section&lt;/li&gt;
-&lt;li&gt;文章 article&lt;/li&gt;
-&lt;li&gt;段落 p&lt;/li&gt;
-&lt;li&gt;头部 header&lt;/li&gt;
-&lt;li&gt;脚部 footer&lt;/li&gt;
-&lt;li&gt;主要 main&lt;/li&gt;
-&lt;li&gt;旁支 aside&lt;/li&gt;
-&lt;li&gt;划分 div&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;heading-1&#34;&gt;全局属性&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;class：类(class 找元素非常不方便)，推荐：
-&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6b9e46c1ea677?w=678&amp;amp;h=484&amp;amp;f=png&amp;amp;s=61754&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;contenteditable，可以让所有元素可编辑。&lt;code&gt;&amp;lt;div class=&amp;quot;middle bordered&amp;quot; contenteditable&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;note:
-要想使 style 标签可见：放置 body 内，加&lt;code&gt;style{display:block;}&lt;/code&gt;
-配合 contenteditable 可被编辑样式,这是个调试技巧，可以先显示再编辑。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;hidden：隐藏，比&lt;code&gt;display：block&lt;/code&gt;优先级高&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;id：不到万不得已，不用要 id，因为不会报错。（唯一性会误导别人）
-简写为#xxx，js 可直接调用 id 元素，有些忌讳，新手不要用。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;style：html 的属性，不是 css 的样式，还可通过 js 设置，js 会覆盖 html 的 style（js 优先级最高，html&amp;gt;css）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;tabindex：控制 tab 的顺序。（0 是最后访问，-1 是别访问）
-&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba06008daa35?w=1032&amp;amp;h=102&amp;amp;f=png&amp;amp;s=33221&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;title：可在开发者模式，有代码提示。
-例：标题文字太多，想省略号隐藏。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba0a5c66797b?w=594&amp;amp;h=282&amp;amp;f=png&amp;amp;s=49546&#34; alt=&#34;&#34;&gt;效果为：
-&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba101808df6b?w=726&amp;amp;h=90&amp;amp;f=png&amp;amp;s=8817&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;若要显示完整内容：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba13b53b9899?w=736&amp;amp;h=174&amp;amp;f=png&amp;amp;s=43838&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;-css-&#34;&gt;默认样式（因为 css 还没出生）&lt;/h3&gt;
-&lt;p&gt;查看：开发者工具，element-&amp;gt;style-&amp;gt;user agent stylesheet&lt;/p&gt;
-&lt;h4 id=&#34;css-reset&#34;&gt;css reset(清除默认样式，加自己的样式)&lt;/h4&gt;
-&lt;p&gt;方方老师常用 reset&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba7cb8b2de8c?w=618&amp;amp;h=188&amp;amp;f=png&amp;amp;s=63122&#34; alt=&#34;&#34;&gt;
-也可借鉴大厂源码：
-开发者工具内找 h1h2h3h4…，连击 3 下复制，table 后删除。&lt;/p&gt;
-&lt;p&gt;推荐加上如下图所示代码不加会非常丑&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6ba41439aa9dd?w=292&amp;amp;h=155&amp;amp;f=png&amp;amp;s=15201&#34; alt=&#34;&#34;&gt;
-输入 table+tab 键可快速打出下图代码：
-&lt;img src=&#34;https://user-gold-cdn.xitu.io/2020/1/3/16f6bb9db09ceb82?w=205&amp;amp;h=95&amp;amp;f=png&amp;amp;s=6087&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;heading-2&#34;&gt;内容标签：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;ol：有顺序的列表，内只有 li（list item）&lt;/li&gt;
-&lt;li&gt;ul：无顺序的列表，dl+tab 可生成所有结构&lt;/li&gt;
-&lt;li&gt;dl：描述列表
-&lt;ul&gt;
-&lt;li&gt;dt：描述对象&lt;/li&gt;
-&lt;li&gt;dd：描述数据内容&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;pre：保留所有空格，回车，tab（因为 tab，回车和多个空格会缩成一个空格）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;code:默认字体等宽，
-pre 配合 code 使用，效果更佳。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;hr：分割线&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;br：换行&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;a：超链接&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;href：网址链接&lt;/li&gt;
-&lt;li&gt;target：新窗口打开（国内常用）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;em：强调内容语气，默认斜体&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;strong：强调内容本身，默认加粗&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;quote：内联引用&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;blockquote：块引用&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;heading-3&#34;&gt;第一次使用博客记录下学习笔记，感觉很乱，标签介绍也很简单，以后会边学习边仔细整理。&lt;/h2&gt;
 </description>
       
     </item>
