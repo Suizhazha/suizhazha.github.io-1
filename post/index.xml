@@ -1,194 +1,221 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Jane - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
+    <title>Posts on 隋鑫的博客</title>
+    <link>https://example.com/post/</link>
+    <description>Recent content in Posts on 隋鑫的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 18 Feb 2020 23:25:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 16:06:35 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>JSON浅析</title>
+      <link>https://example.com/post/json%E6%B5%85%E6%9E%90/</link>
+      <pubDate>Thu, 20 Feb 2020 16:06:35 +0800</pubDate>
+      
+      <guid>https://example.com/post/json%E6%B5%85%E6%9E%90/</guid>
+      <description>JSON 中文文档,看铁轨图!!! 支持的数据类型 string：只支持双引号，不支持单引号和无引号 number：支持科学记数法 bool：true 和 false null：没有 undefined object array Notes: 不支持函数和变量，也不支持引用。 其实 JSON 就</description>
+    </item>
+    
+    <item>
+      <title>AJAX原理</title>
+      <link>https://example.com/post/ajax%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Thu, 20 Feb 2020 16:06:02 +0800</pubDate>
+      
+      <guid>https://example.com/post/ajax%E5%8E%9F%E7%90%86/</guid>
+      <description>AJAX：Asynchronous JavaScript and XML 异步的 JavaScript 与 XML 技术），即使用 JS 发送请求和接收响应。 AJAX 原理 步骤： 创建 HttpRequest 对象(XMLHttpRequest()) 调用对象的 open 方法（查看 mdn,只用 method 和 url，后面的参</description>
+    </item>
+    
+    <item>
       <title>异步和promise</title>
-      <link>http://localhost:1313/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</link>
+      <link>https://example.com/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</link>
       <pubDate>Tue, 18 Feb 2020 23:25:11 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</guid>
-      <description>异步 相关解释： 若能直接拿到结果，不拿到结果不离开,就是同步。 例如：去医院挂号，拿到号才能离开窗口。 不能直接拿到结果，则是异步。 例如：去餐厅门</description>
+      <guid>https://example.com/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</guid>
+      <description>异步 相关解释： 若能直接拿到结果，不拿到结果不离开,就是同步。 例如：去医院挂号，拿到号才能离开窗口。 不能直接拿到结果，则是异步。 例如：去餐厅门口等位，可以拿到号去逛逛，而每 10 分钟去餐厅问一下，为轮询，扫</description>
     </item>
     
     <item>
       <title>关于jQuery</title>
-      <link>http://localhost:1313/post/%E5%85%B3%E4%BA%8Ejquery/</link>
+      <link>https://example.com/post/%E5%85%B3%E4%BA%8Ejquery/</link>
       <pubDate>Sat, 15 Feb 2020 22:48:52 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E5%85%B3%E4%BA%8Ejquery/</guid>
-      <description>jQuery 如何获取元素 jQuery 的基本设计思想和主要用法，就是&amp;quot;选择某个网页元素，然后对其进行某种操作&amp;rdquo;。这是它区别于其他 Javascript 库的根本特</description>
+      <guid>https://example.com/post/%E5%85%B3%E4%BA%8Ejquery/</guid>
+      <description>jQuery 如何获取元素 jQuery 的基本设计思想和主要用法，就是&amp;quot;选择某个网页元素，然后对其进行某种操作&amp;rdquo;。这是它区别于其他 Javascript 库的根本特点。 使用 jQuery 的第一步，往往就是将一个选择表达式，放进构造函数 j</description>
     </item>
     
     <item>
       <title>关于DOM</title>
-      <link>http://localhost:1313/post/%E5%85%B3%E4%BA%8Edom/</link>
+      <link>https://example.com/post/%E5%85%B3%E4%BA%8Edom/</link>
       <pubDate>Sun, 09 Feb 2020 21:02:40 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E5%85%B3%E4%BA%8Edom/</guid>
-      <description>DOM:文档对象模型(Document Object Model) API 获取任意元素，也叫标签 window.idxxx或直接idxxx document.getElementByid(&#39;idxxx&#39;) //获取与全局属性冲突的id document.getElementsByTagName(&#39;div&#39;)[0] /</description>
+      <guid>https://example.com/post/%E5%85%B3%E4%BA%8Edom/</guid>
+      <description>DOM:文档对象模型(Document Object Model) API 获取任意元素，也叫标签 window.idxxx或直接idxxx document.getElementByid(&#39;idxxx&#39;) //获取与全局属性冲突的id document.getElementsByTagName(&#39;div&#39;)[0] //获取所有标签名为div的元素，因为是全部div，需要下标获</description>
     </item>
     
     <item>
       <title>算法入门下</title>
-      <link>http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/</link>
+      <link>https://example.com/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/</link>
       <pubDate>Thu, 06 Feb 2020 22:33:46 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/</guid>
-      <description>选择排序(续) 重写 minIndex 循环思路： let minIndex = (numbers) =&amp;gt; { let index = 0 for(let i = 1;i &amp;lt; numbers.length; i++){ if(numbers[i] &amp;lt; numbers[index]){ index = 1 } } return index } 重写 sort let sort = (numbers) =&amp;gt; { for(let i=0;i&amp;lt;numbers.length - 1;i++){ console.log(`----`) console.log(`i: ${i}`) let index = minIndex(numbers.slice(i)) + i //若循环</description>
+      <guid>https://example.com/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/</guid>
+      <description>选择排序(续) 重写 minIndex 循环思路： let minIndex = (numbers) =&amp;gt; { let index = 0 for(let i = 1;i &amp;lt; numbers.length; i++){ if(numbers[i] &amp;lt; numbers[index]){ index = 1 } } return index } 重写 sort let sort = (numbers) =&amp;gt; { for(let i=0;i&amp;lt;numbers.length - 1;i++){ console.log(`----`) console.log(`i: ${i}`) let index = minIndex(numbers.slice(i)) + i //若循环已经找到第一个最小的数字，则之后再找最小时，忽略第一个 console.log(`index: ${index}`) console.log(`min:</description>
     </item>
     
     <item>
       <title>算法入门上</title>
-      <link>http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</link>
+      <link>https://example.com/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</link>
       <pubDate>Tue, 04 Feb 2020 22:38:49 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</guid>
-      <description>查找两个数中较大的 let maxOf2 = (numbers) =&amp;gt;{ if(numbers[0] &amp;lt; number[1]){ return number[1] }else { return number[0] } } 优化： let maxOf2 = numbers =&amp;gt; number[0] &amp;lt; number[1] ?number[1]:number[0] 再优化： let maxOf2 = ([a,b]) =&amp;gt; a &amp;lt; b ? b : a //析构赋值 maxOf2([1,2</description>
+      <guid>https://example.com/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</guid>
+      <description>查找两个数中较大的 let maxOf2 = (numbers) =&amp;gt;{ if(numbers[0] &amp;lt; number[1]){ return number[1] }else { return number[0] } } 优化： let maxOf2 = numbers =&amp;gt; number[0] &amp;lt; number[1] ?number[1]:number[0] 再优化： let maxOf2 = ([a,b]) =&amp;gt; a &amp;lt; b ? b : a //析构赋值 maxOf2([1,2])//2,新手调用法 maxOf2.call(null,[1</description>
     </item>
     
     <item>
       <title>JS运算符</title>
-      <link>http://localhost:1313/post/js%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <link>https://example.com/post/js%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
       <pubDate>Mon, 03 Feb 2020 21:00:25 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/js%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
-      <description>算数运算符 number 运算 加减乘除 余数 -1 % 7的余数为 -1//提个负号，加 1 % 7的余数 //正常数学-1 % 7=== 6 % 7 的余数 指数 7 ** 2 //49 7 ** 3 //343 自增自减 a++</description>
+      <guid>https://example.com/post/js%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>算数运算符 number 运算 加减乘除 余数 -1 % 7的余数为 -1//提个负号，加 1 % 7的余数 //正常数学-1 % 7=== 6 % 7 的余数 指数 7 ** 2 //49 7 ** 3 //343 自增自减 a++//a在前，值为前 ++a//a在后，值为后 求值运算符 var a = 8</description>
     </item>
     
     <item>
       <title>JS函数</title>
-      <link>http://localhost:1313/post/js%E5%87%BD%E6%95%B0/</link>
+      <link>https://example.com/post/js%E5%87%BD%E6%95%B0/</link>
       <pubDate>Sat, 01 Feb 2020 23:57:11 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/js%E5%87%BD%E6%95%B0/</guid>
-      <description>函数是一种特殊的对象 定义一个函数 具名函数 function 函数名(形参1，形参2){ 语句 return 返回值 } 匿名函数（去掉函数名） let a =function(x,y){ return x+y }//也叫函数表达式 not</description>
+      <guid>https://example.com/post/js%E5%87%BD%E6%95%B0/</guid>
+      <description>函数是一种特殊的对象 定义一个函数 具名函数 function 函数名(形参1，形参2){ 语句 return 返回值 } 匿名函数（去掉函数名） let a =function(x,y){ return x+y }//也叫函数表达式 note： let a =function fn(x,y){ return x+y } fn(1,2)//会报错，因为fn函数在等</description>
     </item>
     
     <item>
       <title>JS数组</title>
-      <link>http://localhost:1313/post/js%E6%95%B0%E7%BB%84/</link>
+      <link>https://example.com/post/js%E6%95%B0%E7%BB%84/</link>
       <pubDate>Fri, 31 Jan 2020 15:10:34 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/js%E6%95%B0%E7%BB%84/</guid>
-      <description>JS 数组 一种特殊的对象，JS 其实没有真正的数组，只是用对象模拟数组。 元素的数据类型可以不同。 内存不一定是连续的（因为对象是随机存储的）。 不能通</description>
+      <guid>https://example.com/post/js%E6%95%B0%E7%BB%84/</guid>
+      <description>JS 数组 一种特殊的对象，JS 其实没有真正的数组，只是用对象模拟数组。 元素的数据类型可以不同。 内存不一定是连续的（因为对象是随机存储的）。 不能通过数字下标，而是通过字符串下标。 意味着数组可以有任何 key。</description>
     </item>
     
     <item>
       <title>JavaScript对象</title>
-      <link>http://localhost:1313/post/javascript%E5%AF%B9%E8%B1%A1/</link>
+      <link>https://example.com/post/javascript%E5%AF%B9%E8%B1%A1/</link>
       <pubDate>Mon, 27 Jan 2020 21:13:53 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/javascript%E5%AF%B9%E8%B1%A1/</guid>
-      <description>对象 object 唯一复杂数据类型 定义 无序的数据集合 键值对（name 是键，frank 是值，组成了一对键值对）的集合 写法 1. let obj={&#39;name&#39;:&#39;frank&#39;,&#39;age&#39;:18} //name，age 只能是字</description>
+      <guid>https://example.com/post/javascript%E5%AF%B9%E8%B1%A1/</guid>
+      <description>对象 object 唯一复杂数据类型 定义 无序的数据集合 键值对（name 是键，frank 是值，组成了一对键值对）的集合 写法 1. let obj={&#39;name&#39;:&#39;frank&#39;,&#39;age&#39;:18} //name，age 只能是字符串，就算引号删掉，也还是字符串 2. let obj=new Object({name&#39;:&#39;frank&#39;}) //正规写法，上面是</description>
     </item>
     
     <item>
       <title>JS变量声明，数据类型和类型转换</title>
-      <link>http://localhost:1313/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
+      <link>https://example.com/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
       <pubDate>Sun, 26 Jan 2020 21:00:42 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</guid>
-      <description>推荐阅读：《我用了两个月的时间才理解 let》 变量声明 三种声明方式： var a = 1 var 过时，不好用。 let a = 1 let 新的，更合理，用于变量声明。 const a = 1 const 声</description>
+      <guid>https://example.com/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</guid>
+      <description>推荐阅读：《我用了两个月的时间才理解 let》 变量声明 三种声明方式： var a = 1 var 过时，不好用。 let a = 1 let 新的，更合理，用于变量声明。 const a = 1 const 声明必须赋值，不可更改，用于常量声明。 let 声明： 遵循块作用域，使</description>
     </item>
     
     <item>
       <title>系统学习HTTP</title>
-      <link>http://localhost:1313/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/</link>
+      <link>https://example.com/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/</link>
       <pubDate>Fri, 24 Jan 2020 21:28:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/</guid>
-      <description>体系化学习 基础概念（必会的） 如何调试（用的是 node.js，可以用 log/debugger） 查资料（node.js 文档） 标准制定者（HTTP</description>
+      <guid>https://example.com/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/</guid>
+      <description>体系化学习 基础概念（必会的） 如何调试（用的是 node.js，可以用 log/debugger） 查资料（node.js 文档） 标准制定者（HTTP 规格文档：RFC 2612 等） CRM 学习法（copy，run，modif</description>
     </item>
     
     <item>
       <title>JavaScript语法</title>
-      <link>http://localhost:1313/post/javascript%E8%AF%AD%E6%B3%95/</link>
+      <link>https://example.com/post/javascript%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Mon, 20 Jan 2020 23:54:36 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/javascript%E8%AF%AD%E6%B3%95/</guid>
-      <description>推荐书籍： 你不知道的 JavaScript（先买上卷，适合进阶） 阮一峰的免费教程 网道 表达式 1+2 表达式的值为 3。 add(1,2）表达式的值为函数的</description>
+      <guid>https://example.com/post/javascript%E8%AF%AD%E6%B3%95/</guid>
+      <description>推荐书籍： 你不知道的 JavaScript（先买上卷，适合进阶） 阮一峰的免费教程 网道 表达式 1+2 表达式的值为 3。 add(1,2）表达式的值为函数的返回值。 note：值和返回值不一样，只有函数才有返回值。 console.log 表</description>
     </item>
     
     <item>
       <title>JavaScrip历史及设计缺陷总结</title>
-      <link>http://localhost:1313/post/javascrip%E5%8E%86%E5%8F%B2%E5%8F%8A%E8%AE%BE%E8%AE%A1%E7%BC%BA%E9%99%B7%E6%80%BB%E7%BB%93/</link>
+      <link>https://example.com/post/javascrip%E5%8E%86%E5%8F%B2%E5%8F%8A%E8%AE%BE%E8%AE%A1%E7%BC%BA%E9%99%B7%E6%80%BB%E7%BB%93/</link>
       <pubDate>Fri, 17 Jan 2020 23:26:49 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/javascrip%E5%8E%86%E5%8F%B2%E5%8F%8A%E8%AE%BE%E8%AE%A1%E7%BC%BA%E9%99%B7%E6%80%BB%E7%BB%93/</guid>
-      <description>JS 的起源（始于网景） 1993 年，伊利诺伊大学厄巴纳-尚佩恩分校的国家超级电脑应用中心（NCSA）发表了 NCSA Mosaic，这是最早流行的图形接口网页浏</description>
+      <guid>https://example.com/post/javascrip%E5%8E%86%E5%8F%B2%E5%8F%8A%E8%AE%BE%E8%AE%A1%E7%BC%BA%E9%99%B7%E6%80%BB%E7%BB%93/</guid>
+      <description>JS 的起源（始于网景） 1993 年，伊利诺伊大学厄巴纳-尚佩恩分校的国家超级电脑应用中心（NCSA）发表了 NCSA Mosaic，这是最早流行的图形接口网页浏览器，它在万维网的普及上发挥了重要作用。1994 年，一家名为</description>
     </item>
     
     <item>
       <title>浅析URL</title>
-      <link>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</link>
+      <link>https://example.com/post/%E6%B5%85%E6%9E%90url/</link>
       <pubDate>Thu, 16 Jan 2020 00:34:31 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</guid>
-      <description>IP：网际协议，全称 Internet Protocal。 主要有两个功能：标识主机或者网络和寻址。 约定了： 如何定位一台设备。 如何封装数据报文，以跟其他设备交流</description>
+      <guid>https://example.com/post/%E6%B5%85%E6%9E%90url/</guid>
+      <description>IP：网际协议，全称 Internet Protocal。 主要有两个功能：标识主机或者网络和寻址。 约定了： 如何定位一台设备。 如何封装数据报文，以跟其他设备交流。 IP 分为内网和外网。 外网 IP 可在 ip138.com 可查看外网 IP，而重启路由器</description>
     </item>
     
     <item>
       <title>CSS知识总结</title>
-      <link>http://localhost:1313/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</link>
+      <link>https://example.com/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</link>
       <pubDate>Mon, 13 Jan 2020 22:01:29 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</guid>
-      <description>浏览器渲染过程： 根据 HTML 构建 HTML 树（DOM） 文档对象模型(DOM)是 HTML 和 XML 文档的编程接口，它会将 web 页面和脚本或程序语言连接起来。 根据 CSS 构建 CSS 树（</description>
+      <guid>https://example.com/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</guid>
+      <description>浏览器渲染过程： 根据 HTML 构建 HTML 树（DOM） 文档对象模型(DOM)是 HTML 和 XML 文档的编程接口，它会将 web 页面和脚本或程序语言连接起来。 根据 CSS 构建 CSS 树（CSSOM） CSS 对象模型 (CSS Object Model, CSSOM) 是一个存放所有 CSS 选择器与相关特</description>
     </item>
     
     <item>
       <title>CSS布局和定位</title>
-      <link>http://localhost:1313/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/</link>
+      <link>https://example.com/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/</link>
       <pubDate>Fri, 10 Jan 2020 19:54:28 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/</guid>
-      <description>布局是什么： 把页面分成一块一块，按左中右，上中下等排列。 布局分类: 固定宽度布局，例如淘宝网， 一般宽度 960/1000/1024px。 不固定宽</description>
+      <guid>https://example.com/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/</guid>
+      <description>布局是什么： 把页面分成一块一块，按左中右，上中下等排列。 布局分类: 固定宽度布局，例如淘宝网， 一般宽度 960/1000/1024px。 不固定宽度布局，例如手机端，主要靠文档流原理布局。 文档流本身就是自适</description>
     </item>
     
     <item>
       <title>CSS基础</title>
-      <link>http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/</link>
+      <link>https://example.com/post/css%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Mon, 06 Jan 2020 16:40:06 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/</guid>
-      <description>今天在谷里学习了 css 基础知识，结合维基百科和 mdn，写下此博客跟大家分享，如有错误之处，欢迎指正（没有奖励 😝）。 目录： css 历史 体系化学习 文档流 盒</description>
+      <guid>https://example.com/post/css%E5%9F%BA%E7%A1%80/</guid>
+      <description>今天在谷里学习了 css 基础知识，结合维基百科和 mdn，写下此博客跟大家分享，如有错误之处，欢迎指正（没有奖励 😝）。 目录： css 历史 体系化学习 文档流 盒模型 css 历史 css：中文为层叠样式表（又称串样式列表、级联样式</description>
     </item>
     
     <item>
       <title>HTML重点标签</title>
-      <link>http://localhost:1313/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</link>
+      <link>https://example.com/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Fri, 03 Jan 2020 22:14:28 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</guid>
-      <description>最近两天看了饥人谷的 HTML 网课，结合 mdn 文档写了篇博客，分享给大家。如有错误之处，欢迎指正！（没有奖励 😝） a 标签 &amp;lt;a href=&amp;quot;&amp;quot; target=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 属性： href：超链接 tar</description>
+      <guid>https://example.com/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</guid>
+      <description>最近两天看了饥人谷的 HTML 网课，结合 mdn 文档写了篇博客，分享给大家。如有错误之处，欢迎指正！（没有奖励 😝） a 标签 &amp;lt;a href=&amp;quot;&amp;quot; target=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 属性： href：超链接 target：打开超链接窗口方式 （http-server -c-1 或着 pa</description>
     </item>
     
     <item>
       <title>使用hugo搭建个人博客mac版</title>
-      <link>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</link>
+      <link>https://example.com/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</link>
       <pubDate>Wed, 01 Jan 2020 22:15:24 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</guid>
-      <description>大家好，今天给大家分享下如何使用 hugo 搭建个人博客 1.安装 hugo 在终端中输入 brew install hugo安装。 安装成功后可输入hugo version查看版本信息。 2</description>
+      <guid>https://example.com/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</guid>
+      <description>大家好，今天给大家分享下如何使用 hugo 搭建个人博客 1.安装 hugo 在终端中输入 brew install hugo安装。 安装成功后可输入hugo version查看版本信息。 2.创建新网址 hugo new site quickstart 其中quickstart更改为用户名.g</description>
     </item>
     
     <item>
       <title>HTML入门笔记</title>
-      <link>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <link>https://example.com/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 01 Jan 2020 21:59:13 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
-      <description>大家好，上星期在饥人谷学习了 HTML 的历史概述，语法和一些常用标签。前几天因为收拾东西回家，此笔记一直没有写完。今天整理完成后分享给大家，如有错误</description>
+      <guid>https://example.com/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>大家好，上星期在饥人谷学习了 HTML 的历史概述，语法和一些常用标签。前几天因为收拾东西回家，此笔记一直没有写完。今天整理完成后分享给大家，如有错误之处，欢迎指正！（没有奖励 😝） 首先是关于 HTML 的历史: HTML（</description>
+    </item>
+    
+    <item>
+      <title>开博大吉</title>
+      <link>https://example.com/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
+      <pubDate>Fri, 27 Dec 2019 21:34:52 +0800</pubDate>
+      
+      <guid>https://example.com/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+      <description>大家好，我的博客开通了，希望我能写出好文章给大家看</description>
     </item>
     
   </channel>

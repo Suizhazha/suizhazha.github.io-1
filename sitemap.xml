@@ -1,184 +1,153 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://example.com/about/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.com/post/json%E6%B5%85%E6%9E%90/</loc>
+    <lastmod>2020-02-20T16:06:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/post/</loc>
+    <lastmod>2020-02-20T16:06:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2020-02-20T16:06:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/post/ajax%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2020-02-20T16:06:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</loc>
     <lastmod>2020-02-18T23:25:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-02-18T23:25:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/%E5%BC%82%E6%AD%A5%E5%92%8Cpromise/</loc>
-    <lastmod>2020-02-18T23:25:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/%E5%85%B3%E4%BA%8Ejquery/</loc>
+    <loc>https://example.com/post/%E5%85%B3%E4%BA%8Ejquery/</loc>
     <lastmod>2020-02-15T22:48:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E5%85%B3%E4%BA%8Edom/</loc>
+    <loc>https://example.com/about/</loc>
     <lastmod>2020-02-09T21:02:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/</loc>
+    <loc>https://example.com/post/%E5%85%B3%E4%BA%8Edom/</loc>
+    <lastmod>2020-02-09T21:02:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/about/1/</loc>
+    <lastmod>2020-02-09T21:02:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%8B/</loc>
     <lastmod>2020-02-06T22:33:46+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://example.com/post/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2020-02-04T22:38:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
+    <loc>https://example.com/post/js%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
     <lastmod>2020-02-03T21:00:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js%E5%87%BD%E6%95%B0/</loc>
+    <loc>https://example.com/post/js%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2020-02-01T23:57:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js%E6%95%B0%E7%BB%84/</loc>
+    <loc>https://example.com/post/js%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2020-01-31T15:10:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/javascript%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>https://example.com/post/javascript%E5%AF%B9%E8%B1%A1/</loc>
     <lastmod>2020-01-27T21:13:53+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
+    <loc>https://example.com/post/js%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
     <lastmod>2020-01-26T21:00:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/</loc>
+    <loc>https://example.com/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/</loc>
     <lastmod>2020-01-24T21:28:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/javascript%E8%AF%AD%E6%B3%95/</loc>
+    <loc>https://example.com/post/javascript%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2020-01-20T23:54:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/javascrip%E5%8E%86%E5%8F%B2%E5%8F%8A%E8%AE%BE%E8%AE%A1%E7%BC%BA%E9%99%B7%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://example.com/post/javascrip%E5%8E%86%E5%8F%B2%E5%8F%8A%E8%AE%BE%E8%AE%A1%E7%BC%BA%E9%99%B7%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2020-01-17T23:26:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</loc>
+    <loc>https://example.com/post/%E6%B5%85%E6%9E%90url/</loc>
     <lastmod>2020-01-16T00:34:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://example.com/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2020-01-13T22:01:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/</loc>
+    <loc>https://example.com/post/css%E5%B8%83%E5%B1%80%E5%92%8C%E5%AE%9A%E4%BD%8D/</loc>
     <lastmod>2020-01-10T19:54:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/css%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://example.com/post/css%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-01-06T16:40:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</loc>
+    <loc>https://example.com/post/html%E9%87%8D%E7%82%B9%E6%A0%87%E7%AD%BE/</loc>
     <lastmod>2020-01-03T22:14:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</loc>
+    <loc>https://example.com/post/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2mac%E7%89%88/</loc>
     <lastmod>2020-01-01T22:15:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://example.com/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-01-01T21:59:13+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</loc>
+    <loc>https://example.com/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</loc>
     <lastmod>2019-12-27T21:34:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://example.com/categories/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://example.com/tags/</loc>
   </url>
   
 </urlset>

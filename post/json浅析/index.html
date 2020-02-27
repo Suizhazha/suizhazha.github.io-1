@@ -10,9 +10,7 @@
         content="suixin"/>
 
   
-  <meta name="description" content="Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub."/>
+  <meta name="description" content="JSON 中文文档,看铁轨图!!! 支持的数据类型 string：只支持双引号，不支持单引号和无引号 number：支持科学记数法 bool：true 和 false null：没有 undefined object array Notes: 不支持函数和变量，也不支持引用。 其实 JSON 就"/>
   
 
   
@@ -21,11 +19,11 @@ It makes use of a variety of open source projects including:
   
 
   
-  <link rel="canonical" href="https://example.com/about/"/>
+  <link rel="canonical" href="https://example.com/post/json%E6%B5%85%E6%9E%90/"/>
 
   
 
-  <title>About &middot; 隋鑫的博客</title>
+  <title>JSON浅析 &middot; 隋鑫的博客</title>
 
   <link rel="shortcut icon" href="https://example.com/images/favicon.ico"/>
   <link rel="stylesheet" href="https://example.com/css/animate.min.css"/>
@@ -114,18 +112,33 @@ It makes use of a variety of open source projects including:
     <div class="post_page">
       <div class="post animated fadeInDown">
         <div class="post_title post_detail_title">
-          <h2><a href='/about/'>About</a></h2>
-          <span class="date">2017.08.20</span>
+          <h2><a href='/post/json%E6%B5%85%E6%9E%90/'>JSON浅析</a></h2>
+          <span class="date">2020.02.20</span>
         </div>
-        <div class="post_content markdown"><p>Hugo is a static site engine written in Go.</p>
-<p>It makes use of a variety of open source projects including:</p>
+        <div class="post_content markdown"><h3 id="json-httpswwwjsonorgjson-zhhtml"><a href="https://www.json.org/json-zh.html">JSON 中文文档</a>,看铁轨图!!!</h3>
+<h3 id="heading">支持的数据类型</h3>
+<ol>
+<li>string：只支持双引号，不支持单引号和无引号</li>
+<li>number：支持科学记数法</li>
+<li>bool：true 和 false</li>
+<li>null：没有 undefined</li>
+<li>object</li>
+<li>array</li>
+</ol>
+<p>Notes:</p>
+<ol>
+<li>不支持函数和变量，也不支持引用。</li>
+<li>其实 JSON 就是借鉴了 JS。</li>
+</ol>
+<h3 id="windowjson">window.JSON</h3>
 <ul>
-<li><a href="https://github.com/spf13/cobra">Cobra</a></li>
-<li><a href="https://github.com/spf13/viper">Viper</a></li>
-<li><a href="https://github.com/spf13/jWalterWeatherman">J Walter Weatherman</a></li>
-<li><a href="https://github.com/spf13/cast">Cast</a></li>
+<li>JSON.parse</li>
 </ul>
-<p>Learn more and contribute on <a href="https://github.com/gohugoio">GitHub</a>.</p>
+<p>将符合 JSON 语法的字符串转换成 HS 对应类型的数据，若不符合 JSON 语法，则抛出一个 Error 对象，一半用 try catch 捕获错误。</p>
+<ul>
+<li>JSON.stringify</li>
+</ul>
+<p>JSON.parse 的逆运算，由于 JS 数据类型比 JSON 多，所以不一定成功，失败同样抛出一个 Error 对象。</p>
 </div>
         <div class="post_footer">
           
