@@ -10,7 +10,7 @@
         content="Zeuk"/>
 
   
-  <meta name="description" content="体系化学习 基础概念（必会的） 如何调试（用的是 node.js，可以用 log/debugger） 查资料（node.js 文档） 标准制定者（HTTP 规格文档：RFC 2612 等） CRM 学习法（copy，run，modif"/>
+  <meta name="description" content="同源策略 浏览器故意设计的一个功能限制 源和同源 输入window.origin或者location.origin可以得到当前源 源=协议&#43;域名&#43;端口号，若两个 url 的协议，域名，端口号完全一致，那么这两个 url 就是"/>
   
 
   
@@ -19,11 +19,11 @@
   
 
   
-  <link rel="canonical" href="https://example.com/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/"/>
+  <link rel="canonical" href="https://example.com/post/%E5%85%B3%E4%BA%8E%E8%B7%A8%E5%9F%9F/"/>
 
   
 
-  <title>系统学习HTTP &middot; 无尽光芒</title>
+  <title>关于跨域 &middot; 无尽光芒</title>
 
   <link rel="shortcut icon" href="https://example.com/images/favicon.ico"/>
   <link rel="stylesheet" href="https://example.com/css/animate.min.css"/>
@@ -112,58 +112,42 @@
     <div class="post_page">
       <div class="post animated fadeInDown">
         <div class="post_title post_detail_title">
-          <h2><a href='/post/%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0http/'>系统学习HTTP</a></h2>
-          <span class="date">2020.01.24</span>
+          <h2><a href='/post/%E5%85%B3%E4%BA%8E%E8%B7%A8%E5%9F%9F/'>关于跨域</a></h2>
+          <span class="date">2020.02.27</span>
         </div>
-        <div class="post_content markdown"><h3 id="heading">体系化学习</h3>
-<ol>
-<li>基础概念（必会的）</li>
-<li>如何调试（用的是 node.js，可以用 log/debugger）</li>
-<li>查资料（node.js 文档）</li>
-<li>标准制定者（HTTP 规格文档：RFC 2612 等）</li>
-<li>CRM 学习法（copy，run，modify）</li>
-</ol>
-<h2 id="http-">HTTP 基础概念</h2>
+        <div class="post_content markdown"><h2 id="heading">同源策略</h2>
+<p>浏览器故意设计的一个功能限制</p>
 <ul>
-<li>请求</li>
+<li>源和同源</li>
 </ul>
-<pre><code>请求动词 路径/查询参数 协议名/版本
-//以上是请求行
-Host：域名或者IP
-Accept： 接收内容
-Content-type：请求体的格式
-//以上为请求头
-
-//请求头和请求体中间要加一个回车
-请求体（上传的内容）
-
-</code></pre><p>例如：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/1/22/16fcdb66f6ea2883?w=338&amp;h=381&amp;f=png&amp;s=50536" alt=""></p>
-<p>Notes：</p>
-<ol>
-<li>请求格式主要分为：请求行，请求头，请求体。</li>
-<li>请求动词有：GET（获取）/POST（上传）/PUT/PATCH/DELETE 等。</li>
-<li>请求体在 GET 请求中一般为空。</li>
-<li>具体文档<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html">RFC 2612 第五章</a></li>
-<li>大小写随意。</li>
-</ol>
+<p>输入<code>window.origin</code>或者<code>location.origin</code>可以得到当前源</p>
+<p>源=协议+域名+端口号，若两个 url 的协议，域名，端口号完全一致，那么这两个 url 就是同源的。</p>
 <ul>
-<li>响应</li>
+<li>同源策略</li>
 </ul>
-<pre><code>协议名/版本 状态码（默认200） 状态字符串
-//以上为状态行
-Content-Type：响应体格式（其他一般不用管）
-//以上为响应头
+<p>浏览器规定，如果 JS 运行在源 A 里，那么就只能获取源 A 的数据，不能获取源 B 的数据。也就是说，不同源的页面之间，不准互相访问数据，即不允许跨域。</p>
+<p>note: referer 可以看出发的请求是否有区别。</p>
+<pre><code>Q: 为什么可以跨域使用CSS，JS和图片？
 
-//响应头和响应体体中间要加一个回车
-响应体（即下载内容）
-</code></pre><p>例如：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/1/22/16fcdbba5db72f39?w=334&amp;h=148&amp;f=png&amp;s=20138" alt=""></p>
-<p>Notes：</p>
+A: 同源策略限制的是数据访问，我们只是引用了CSS，JS和图片，但不知道其具体内容。
+</code></pre>
+<h2 id="cors">CORS(跨域资源共享)</h2>
+<p>突破浏览器数据共享限制的方法,要共享数据前，需要提前声明。</p>
+<p>添加响应头：</p>
+<pre><code>response.setHeader('Access-Control-Allow-Origin','http://foo.example')
+</code></pre><p>CORS 分为简单请求和复杂请求，具体看<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS">MDN 文档</a></p>
+<h2 id="jsonp">JSONP</h2>
+<p>在跨域时，因为某些条件，当前浏览器不支持 CORS，必须使用另一种方式跨域。于是我们请求一个 JS 文件，这个 JS 文件会执行一个回调(callback)，回调里就有想要的数据。</p>
+<p>回调名字是可以随机生成的一个随机数，用这个名字以 callback 的参数传给后台，后台把这个函数再返回给我们，再执行。</p>
+<p>优点：</p>
 <ol>
-<li>响应格式分为状态行，响应头，响应体。</li>
-<li>常见的状态码是考点。</li>
-<li>文档在<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html">RFC 2612 第六章</a></li>
+<li>兼容 IE</li>
+<li>可以跨域</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>由于是 script 标签，所以他读不了 AJAX 那么精确(不知道状态码和响应头)，只知道成功和失败。</li>
+<li>由于是 script 标签，只能发 get 请求，即 JSONP 不支持 post。</li>
 </ol>
 </div>
         <div class="post_footer">
