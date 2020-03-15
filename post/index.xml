@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 无尽光芒</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 Mar 2020 22:08:26 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 23:30:17 +0800</lastBuildDate>
     
 	<atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>初探Vue</title>
+      <link>https://example.com/post/%E5%88%9D%E6%8E%A2vue/</link>
+      <pubDate>Mon, 09 Mar 2020 23:30:17 +0800</pubDate>
+      
+      <guid>https://example.com/post/%E5%88%9D%E6%8E%A2vue/</guid>
+      <description>Vue 一开始采用了 MVC 框架，V（视图）是 Vue 的重点，M 和 C 则被简化。 Vue 将在 2020 年发布 3.0 版本，过去的 1.0 版本是 MVVM 框架，在 2.0 版本后就不是 MVVM 框架（看似是 MVVM 框架），在 3.0 版本就完全不是 MVVM 框架了。 Vue 完整版与运行时版的区别 Vue 完</description>
+    </item>
+    
+    <item>
+      <title>Webpack</title>
+      <link>https://example.com/post/webpack-loader%E5%92%8Cwebpack-plugin/</link>
+      <pubDate>Sun, 08 Mar 2020 21:55:01 +0800</pubDate>
+      
+      <guid>https://example.com/post/webpack-loader%E5%92%8Cwebpack-plugin/</guid>
+      <description>webpack loader v.s webpack plugin 英文翻译 loader 加载器 plugin 插件 中文翻译 loader 用来加载文件，例如： babel loader 用来加载 JS 文件,将高版本 JS 转译成低版本的 JS，style/css loader 用来加载 CSS 文件引入到 JS 中，并转为页面中的 style 标签插入到 head 标签里。 plugin 用来</description>
+    </item>
     
     <item>
       <title>初识MVC</title>
@@ -45,6 +63,15 @@
       
       <guid>https://example.com/post/ajax%E5%8E%9F%E7%90%86/</guid>
       <description>AJAX：Asynchronous JavaScript and XML 异步的 JavaScript 与 XML 技术），即使用 JS 发送请求和接收响应。 AJAX 原理 步骤： 创建 HttpRequest 对象(XMLHttpRequest()) 调用对象的 open 方法（查看 mdn,只用 method 和 url，后面的参</description>
+    </item>
+    
+    <item>
+      <title>AJAX原理</title>
+      <link>https://example.com/post/%E6%9C%89%E5%85%B3%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/</link>
+      <pubDate>Thu, 20 Feb 2020 16:06:02 +0800</pubDate>
+      
+      <guid>https://example.com/post/%E6%9C%89%E5%85%B3%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/</guid>
+      <description>git ## 数据响应式 Vue基本不用手动操作 dom，data 中声明的数据状态改变后会自动重新渲染相关的 dom。 换句话说就是 Vue 自己知道哪个数据状态发生了变化及哪里有用到这个数据需要随之修改。 ### 关于数据响应式的问</description>
     </item>
     
     <item>

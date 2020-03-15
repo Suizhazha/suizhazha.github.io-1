@@ -10,7 +10,7 @@
         content="Zeuk"/>
 
   
-  <meta name="description" content="大家好，欢迎来到隋鑫的博客"/>
+  <meta name="description" content="Vue 一开始采用了 MVC 框架，V（视图）是 Vue 的重点，M 和 C 则被简化。 Vue 将在 2020 年发布 3.0 版本，过去的 1.0 版本是 MVVM 框架，在 2.0 版本后就不是 MVVM 框架（看似是 MVVM 框架），在 3.0 版本就完全不是 MVVM 框架了。 Vue 完整版与运行时版的区别 Vue 完"/>
   
 
   
@@ -19,11 +19,11 @@
   
 
   
-  <link rel="canonical" href="https://example.com/about/"/>
+  <link rel="canonical" href="https://example.com/post/%E5%88%9D%E6%8E%A2vue/"/>
 
   
 
-  <title>测试 &middot; 无尽光芒</title>
+  <title>初探Vue &middot; 无尽光芒</title>
 
   <link rel="shortcut icon" href="https://example.com/images/favicon.ico"/>
   <link rel="stylesheet" href="https://example.com/css/animate.min.css"/>
@@ -112,10 +112,43 @@
     <div class="post_page">
       <div class="post animated fadeInDown">
         <div class="post_title post_detail_title">
-          <h2><a href='/about/'>测试</a></h2>
-          <span class="date">2020.02.09</span>
+          <h2><a href='/post/%E5%88%9D%E6%8E%A2vue/'>初探Vue</a></h2>
+          <span class="date">2020.03.09</span>
         </div>
-        <div class="post_content markdown"><p>大家好，欢迎来到隋鑫的博客</p>
+        <div class="post_content markdown"><h4 id="vue--mvc-v-vue-m--c-">Vue 一开始采用了 MVC 框架，V（视图）是 Vue 的重点，M 和 C 则被简化。</h4>
+<h4 id="vue--2020--30--10--mvvm--20--mvvm--mvvm--30--mvvm-">Vue 将在 2020 年发布 3.0 版本，过去的 1.0 版本是 MVVM 框架，在 2.0 版本后就不是 MVVM 框架（看似是 MVVM 框架），在 3.0 版本就完全不是 MVVM 框架了。</h4>
+<h2 id="vue-">Vue 完整版与运行时版的区别</h2>
+<ol>
+<li>Vue 完整版文件名为 vue.js 和 vue.min.js , 后者是压缩版，取消了注释和警告，适合在生产环境下使用。</li>
+<li>Vue 运行时版文件名为 vue.runtime.js 和 vue.runtime.min.js， 后者是压缩版，取消了注释和警告，适合在生成环境下使用。</li>
+</ol>
+<h4 id="-vue-loader--vue-">个人建议选择运行时版版，配合 vue-loader 和 vue 文件。</h4>
+<p>原因：</p>
+<ol>
+<li>保证用户体验，用户下载的 JS 文件体积更小(小 30%)，但只支持 h 函数。</li>
+<li>保证开发体验，开发者可以直接在 vue 文件里写 HTML 标签，而不用写 h 函数。</li>
+<li>累活让 vue-loader 来做，vue-loader 把 vue 文件里的 HTML 转为 h 函数。</li>
+</ol>
+<h2 id="template--render-">template 和 render 怎么用</h2>
+<pre><code>//template (完整版使用)
+// 需要编译器
+new Vue({
+  template: '&lt;div&gt;{{ hi }}&lt;/div&gt;'
+})
+</code></pre><pre><code>//render (完整版与运行时版使用)
+// 不需要编译器
+new Vue({
+  render (h) {
+    return h('div', this.hi)
+  }
+})
+</code></pre><h2 id="-codesandboxio--vue-">使用 codesandbox.io 写 Vue 代码</h2>
+<ol>
+<li><a href="https://codesandbox.io">点击进入 codesandbox.io 主页</a></li>
+<li>在主页选择 create a Sandbox</li>
+<li>然后选择 vue 开始撸代码</li>
+</ol>
+<h4 id="note-sandbox-">note: Sandbox 使用的是运行时版</h4>
 </div>
         <div class="post_footer">
           
