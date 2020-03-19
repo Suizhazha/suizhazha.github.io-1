@@ -6,7 +6,7 @@
     <description>Recent content on 无尽光芒</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Mar 2020 23:30:17 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 16:06:02 +0800</lastBuildDate>
     
 	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,15 @@
       <description>Hugo is a static site engine written in Go.
 It makes use of a variety of open source projects including:
  Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>有关数据响应式</title>
+      <link>https://example.com/post/%E6%9C%89%E5%85%B3%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/</link>
+      <pubDate>Sun, 15 Mar 2020 16:06:02 +0800</pubDate>
+      
+      <guid>https://example.com/post/%E6%9C%89%E5%85%B3%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/</guid>
+      <description>git ## 数据响应式 Vue基本不用手动操作 dom，data 中声明的数据状态改变后会自动重新渲染相关的 dom。 换句话说就是 Vue 自己知道哪个数据状态发生了变化及哪里有用到这个数据需要随之修改。 ### 关于数据响应式的问</description>
     </item>
     
     <item>
@@ -74,15 +83,6 @@ It makes use of a variety of open source projects including:
       
       <guid>https://example.com/post/ajax%E5%8E%9F%E7%90%86/</guid>
       <description>AJAX：Asynchronous JavaScript and XML 异步的 JavaScript 与 XML 技术），即使用 JS 发送请求和接收响应。 AJAX 原理 步骤： 创建 HttpRequest 对象(XMLHttpRequest()) 调用对象的 open 方法（查看 mdn,只用 method 和 url，后面的参</description>
-    </item>
-    
-    <item>
-      <title>AJAX原理</title>
-      <link>https://example.com/post/%E6%9C%89%E5%85%B3%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/</link>
-      <pubDate>Thu, 20 Feb 2020 16:06:02 +0800</pubDate>
-      
-      <guid>https://example.com/post/%E6%9C%89%E5%85%B3%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/</guid>
-      <description>git ## 数据响应式 Vue基本不用手动操作 dom，data 中声明的数据状态改变后会自动重新渲染相关的 dom。 换句话说就是 Vue 自己知道哪个数据状态发生了变化及哪里有用到这个数据需要随之修改。 ### 关于数据响应式的问</description>
     </item>
     
     <item>
