@@ -6,7 +6,7 @@
     <description>Recent content on 无尽光芒</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Mar 2020 22:20:09 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 23:08:43 +0800</lastBuildDate>
     
 	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,15 @@
       <description>Hugo is a static site engine written in Go.
 It makes use of a variety of open source projects including:
  Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Template模板</title>
+      <link>https://example.com/post/template%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Fri, 20 Mar 2020 23:08:43 +0800</pubDate>
+      
+      <guid>https://example.com/post/template%E6%A8%A1%E6%9D%BF/</guid>
+      <description>Vue模板使用XML语法，使用{{}}插入表达式，使用v-html，v-on， v-bind等指令操作DOM，使用v-if，v-for等指令实现条件判断和循环。 展示内容 表达式: {{ object.a }} 表达式 {{ n+1 }} 任何运算</description>
     </item>
     
     <item>

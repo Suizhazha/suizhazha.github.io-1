@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="Zeuk"/>
+
+  
+  <meta name="description" content="Vue模板使用XML语法，使用{{}}插入表达式，使用v-html，v-on， v-bind等指令操作DOM，使用v-if，v-for等指令实现条件判断和循环。 展示内容 表达式: {{ object.a }} 表达式 {{ n&#43;1 }} 任何运算"/>
+  
+
+  
+  
+  <meta name="keywords" content="Hugo, theme, zozo"/>
+  
+
+  
+  <link rel="canonical" href="https://example.com/post/template%E6%A8%A1%E6%9D%BF/"/>
+
+  
+
+  <title>Template模板 &middot; 无尽光芒</title>
+
+  <link rel="shortcut icon" href="https://example.com/images/favicon.ico"/>
+  <link rel="stylesheet" href="https://example.com/css/animate.min.css"/>
+  <link rel="stylesheet" href="https://example.com/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://example.com/css/zozo.css"/>
+  <link rel="stylesheet" href="https://example.com/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="https://example.com">
+          <span>无尽光芒</span>
+          <img src="https://example.com/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title">the site subtitle</p>
+      <div class="my_socials">
+        
+        
+        <a href="%20" title="facebook" target="_blank"><i class="remixicon-facebook-fill"></i></a>
+        
+        
+        
+        <a href="%20" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        
+        <a href="%20" title="instagram" target="_blank"><i class="remixicon-instagram-fill"></i></a>
+        
+        
+        
+        <a href="%20" title="twitter" target="_blank"><i class="remixicon-twitter-fill"></i></a>
+        
+        
+        
+        <a href="%20" title="weibo" target="_blank"><i class="remixicon-weibo-fill"></i></a>
+        
+        
+        <a href="https://example.com/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/post/template%E6%A8%A1%E6%9D%BF/'>Template模板</a></h2>
+          <span class="date">2020.03.20</span>
+        </div>
+        <div class="post_content markdown"><p>Vue模板使用XML语法，使用{{}}插入表达式，使用v-html，v-on， v-bind等指令操作DOM，使用v-if，v-for等指令实现条件判断和循环。</p>
+<h2 id="heading">展示内容</h2>
+<ul>
+<li>
+<p>表达式:</p>
+<ol>
+<li>
+<p>{{ object.a }}  表达式</p>
+</li>
+<li>
+<p>{{ n+1 }} 任何运算(不支持 if else)</p>
+</li>
+<li>
+<p>{{ fn(n) }} 调用函数</p>
+</li>
+<li>
+<p>若值为undefined 或者 null 就不显示</p>
+</li>
+<li>
+<p>另一种写法<code>&lt;div v-text=&quot;表达式&quot;&gt;&lt;/div&gt;</code>可代替{{}}</p>
+</li>
+</ol>
+</li>
+<li>
+<p>HTML内容:</p>
+<p>若 data.x 的值为<code>&lt;strong&gt;hi&lt;/strong&gt;</code></p>
+<p>则<code>&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;</code>即可显示粗体的hi。</p>
+</li>
+<li>
+<p>展示{{ n }}</p>
+<p><code>&lt;div v-pre&gt;{{ n }} &lt;/div&gt;</code></p>
+<p>v-pre 不会对模板进行编译</p>
+</li>
+</ul>
+<h2 id="heading-1">绑定属性</h2>
+<ul>
+<li>绑定src</li>
+</ul>
+<pre><code>&lt;img v-bind:src=&quot;x&quot; /&gt;
+可简写为:
+&lt;img :src=&quot;x&quot; /&gt;
+</code></pre><ul>
+<li>绑定对象</li>
+</ul>
+<pre><code>//绑定内联事件
+&lt;div 
+    :style = &quot;{border: '1px' solid red,height:100}&quot;&gt;
+&lt;/div&gt;//100px可以写成100，但100em不行    
+</code></pre><h2 id="heading-2">绑定事件</h2>
+<ul>
+<li>v-on：事件名</li>
+</ul>
+<pre><code>//只写函数名，点击之后，Vue会运行add()
+&lt;button v-on:click= &quot;add&quot;&gt;+1&lt;button&gt;
+
+//函数名后加参数，点击之后，Vue会运行xxx(1)
+&lt;button v-on:click= &quot;xxx(1)&quot;&gt;xxx&lt;button&gt;
+
+//直接写可执行代码，点击之后，Vue会运行n+=1
+&lt;button v-on:click= &quot;n+=1&quot;&gt;xxx&lt;button&gt;
+</code></pre><ul>
+<li><strong>缩写!!!</strong></li>
+</ul>
+<pre><code>&lt;button @click&gt;=&quot;add&quot;&gt;+1&lt;/button&gt;
+</code></pre><h2 id="heading-3">条件判断</h2>
+<ul>
+<li>if&hellip;else:</li>
+</ul>
+<pre><code>&lt;div v-if=&quot;x &gt; 0&quot;&gt;x&gt;0&lt;/div&gt;
+
+&lt;div v-else-if=&quot;x === 0&quot;&gt;x === 0&lt;/div&gt;
+
+&lt;div v-else&gt;x &lt; 0&lt;/div&gt;
+
+</code></pre><h2 id="heading-4">循环</h2>
+<ul>
+<li>for(value,key) in 对象或数组</li>
+</ul>
+<pre><code>//遍历数组
+&lt;ul&gt;
+    &lt;li v-for=&quot;(u,index) in users&quot; :key=&quot;index&quot;&gt; 
+    索引:{{index}} 值:{{u.name}}
+    &lt;/li&gt;
+&lt;/ul&gt;//:key=&quot;index&quot;有bug，后面说
+
+//遍历对象
+&lt;ul&gt;
+    &lt;li v-for=&quot;(value,index) in obj&quot; :key=&quot;name&quot;&gt; 
+    属性名:{{name}},属性值:{{value}}
+    &lt;/li&gt;
+&lt;/ul&gt;//：key需要唯一性的值
+</code></pre><h2 id="heading-5">显示，隐藏</h2>
+<ul>
+<li>v-show:</li>
+</ul>
+<pre><code>&lt;div v-show=&quot;n % 2 ===0&quot;&gt; n是偶数 &lt;/div&gt;
+</code></pre><ul>
+<li>近似等于：</li>
+</ul>
+<pre><code>&lt;div :style=&quot;{display: n % 2 ===0?'block':'none'}&quot;&gt;n是偶数&lt;/div&gt;
+</code></pre><p>note:</p>
+<p>看的见得元素display不只有block，如table的display为table,li的display为list-item。</p>
+</div>
+        <div class="post_footer">
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span>我的精神家园</span>
+  </div>
+</footer>
+
+
+
+<script src="https://example.com/js/jquery-3.3.1.min.js"></script>
+<script src="https://example.com/js/zozo.js"></script>
+<script src="https://example.com/js/highlight.pack.js"></script>
+<link  href="https://example.com/css/fancybox.min.css" rel="stylesheet">
+<script src="https://example.com/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>
